@@ -1,0 +1,62 @@
+name: i18n release
+
+on:
+  push:
+    tags: ['zh-CN-v*-r*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag, e.g. zh-CN-v0.9.137-r2. Must refer to the selected source when publishing.'
+        required: true
+        type: string
+      publish:
+        description: 'Publish after full verification. False only prepares downloadable artifacts; a prospective tag may be used.'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: i18n-release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    uses: ./.github/workflows/i18n-verify.yml
+    with:
+      release_tag: ${{ inputs.tag || github.ref_name }}
+      publish: ${{ github.event_name == 'push' || inputs.publish == true }}
+  publish:
+    needs: verify
+    if: github.repository == 'yoyicue/Cronicle' && (github.event_name == 'push' || inputs.publish == true)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+      SOURCE_SHA: ${{ github.sha }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
+        with:
+          name: i18n-release
+          path: release
+      - name: Verify attachments, publish a draft, then check downloads before publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(jq -r .source release/release.json)" = "$SOURCE_SHA"
+          test "$(jq -r .tag release/release.json)" = "$RELEASE_TAG"
+          REMOTE_SHA=$(gh api "repos/$GH_REPO/commits/$RELEASE_TAG" --jq .sha)
+          test "$REMOTE_SHA" = "$SOURCE_SHA"
+          (cd release/assets && sha256sum -c SHA256SUMS)
+          gh release create "$RELEASE_TAG" release/assets/* --verify-tag --target "$SOURCE_SHA" --title "$RELEASE_TAG" --notes-file release/RELEASE_NOTES.md --draft
+          gh release download "$RELEASE_TAG" --dir downloaded
+          (cd downloaded && sha256sum -c SHA256SUMS)
+          diff -qr release/assets downloaded
+          gh release edit "$RELEASE_TAG" --draft=false
+          gh release view "$RELEASE_TAG" --json url --jq .url >> "$GITHUB_STEP_SUMMARY"

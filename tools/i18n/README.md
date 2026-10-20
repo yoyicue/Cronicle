@@ -22,13 +22,15 @@ tools/i18n/node_modules/node/bin/node tools/i18n/node_modules/@playwright/test/c
 
 工具锁定 Node 22.23.3 和 Playwright 1.64.1，npm 命令使用工具目录安装的 Node，不继承宿主机的 Node 版本。主依赖安装必须使用 `--ignore-scripts`，避免官方 postinstall 注册系统服务。
 
-真实反向代理测试固定 Caddy 2.11.7。macOS arm64 可以执行：
+真实反向代理测试固定 Caddy 2.11.7。macOS arm64 和 Linux x64 可以执行：
 
 ```sh
 npm --prefix tools/i18n run prepare:caddy
 ```
 
 下载脚本验证[官方归档](https://github.com/caddyserver/caddy/releases/tag/v2.11.7)的 SHA-512 和二进制 SHA-256，不安装系统服务。其他平台需自行提供验证过的同版 Caddy，并通过 `CADDY_BIN` 指定二进制路径。Linux 浏览器所需系统库按 Playwright 官方安装说明准备。
+
+GitHub Actions 的自动验收、发布预演、正式 tag 发布和官方 Release 定时检测见 [CI 说明](CI.md)。所有工作流仅操作隔离测试与 GitHub 附件，不连接部署节点。
 
 ## 完整验证
 

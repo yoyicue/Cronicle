@@ -6,6 +6,7 @@
 
 - [构建、验证与安装说明](tools/i18n/README.md)
 - [验收结果及已知边界](tools/i18n/VALIDATION.md)
+- [自动验收、版本发布与上游检测](tools/i18n/CI.md)
 - [官方英文文档](README.md)
 
 ## 下载已构建版本

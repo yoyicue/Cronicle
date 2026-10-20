@@ -9,7 +9,7 @@ const stages = [
   ['upstream', ['upstream.cjs']],
   ['integration', ['run-integration.cjs']]
 ];
-const summary = { started: new Date().toISOString(), stages: [] };
+const summary = { started: new Date().toISOString(), source: cp.execFileSync('git', ['rev-parse', 'HEAD'], { cwd: __dirname, encoding: 'utf8' }).trim(), node: process.version, platform: process.platform, arch: process.arch, stages: [] };
 for (const [name, args] of stages) {
   const begin = Date.now();
   const result = cp.spawnSync(pinnedNode, args, { cwd: __dirname, stdio: name === 'unit' ? ['ignore', 'pipe', 'pipe'] : 'inherit', env: process.env });

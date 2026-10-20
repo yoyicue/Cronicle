@@ -1,0 +1,86 @@
+name: i18n verification
+
+on:
+  push:
+    branches: [zh-CN]
+  pull_request:
+    branches: [zh-CN]
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      release_tag:
+        type: string
+        default: ''
+      publish:
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Full regression and three browsers
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      CI: 'true'
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      PUBLISH_RELEASE: ${{ inputs.publish }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22.23.3
+      - name: Validate release baseline and tag
+        if: inputs.release_tag != ''
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          git fetch --no-tags https://github.com/jhuckaby/Cronicle.git "refs/tags/v$VERSION:refs/tags/v$VERSION"
+          node tools/i18n/ci-release.cjs preflight
+      - name: Install locked dependencies without registering a service
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm ci --prefix tools/i18n --no-audit --no-fund
+      - name: Install browser dependencies and verified Caddy
+        run: |
+          tools/i18n/node_modules/node/bin/node tools/i18n/node_modules/@playwright/test/cli.js install --with-deps chromium firefox webkit
+          npm --prefix tools/i18n run prepare:caddy
+      - name: Run the complete verification and build the tested archive
+        run: npm --prefix tools/i18n run verify
+      - name: Prepare release attachments from the same tested archive
+        if: inputs.release_tag != ''
+        run: tools/i18n/node_modules/node/bin/node tools/i18n/ci-release.cjs
+      - name: Preserve verification evidence
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: i18n-verification
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            tools/i18n/out/verification.json
+            tools/i18n/out/unit.tap
+            tools/i18n/out/upstream.log
+            tools/i18n/out/upstream-result.json
+            tools/i18n/out/integration.json
+            tools/i18n/out/performance.json
+            tools/i18n/out/minute.json
+            tools/i18n/out/smtp.json
+            tools/i18n/out/caddy.log
+            tools/i18n/out/layout-*.png
+            tools/i18n/test-results/
+            tools/i18n/out/release-manifest.json
+            tools/i18n/out/cronicle-zh-CN-*.tar.gz
+      - name: Preserve ready-to-publish attachments
+        if: inputs.release_tag != '' && success()
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: i18n-release
+          path: tools/i18n/out/release/
+          if-no-files-found: error
+          retention-days: 14
