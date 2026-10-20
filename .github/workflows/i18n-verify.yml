@@ -1,4 +1,4 @@
-name: Linux layout diagnosis
+name: Linux font diagnosis
 
 on:
   push:
@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   verify:
-    name: Linux layout diagnosis
+    name: Linux font diagnosis
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:

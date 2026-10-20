@@ -103,12 +103,12 @@ async function sample(pages, name, traced) {
       window.__originalHTML = $P().div.html;
     });
     const font = report.fonts.find(r => r.locale === 'zh-CN').fonts.find(font => !font.isCustomFont).familyName;
-    for (const variant of ['original-before', 'explicit-fallback-font', 'original-middle', 'actions-font-first', 'nowrap-actions', 'keep-all-actions', 'original-after']) {
+    for (const variant of ['original', 'explicit-fallback-font', 'table-font-first', 'table-font-first', 'explicit-fallback-font', 'original']) {
       await chinese.evaluate(({ variant, font }) => {
         document.querySelector('#diagnostic-font-style')?.remove();
         const rules = {
           'explicit-fallback-font': '#page_Schedule .data_table { font-family: "Lato", ' + JSON.stringify(font) + ', helvetica, sans-serif }',
-          'actions-font-first': '#page_Schedule .data_table td:nth-child(8) { font-family: ' + JSON.stringify(font) + ', "Lato", helvetica, sans-serif }',
+          'table-font-first': '#page_Schedule .data_table { font-family: ' + JSON.stringify(font) + ', "Lato", helvetica, sans-serif }',
           'nowrap-actions': '#page_Schedule .data_table td:nth-child(8) { white-space: nowrap }',
           'keep-all-actions': '#page_Schedule .data_table td:nth-child(8) { word-break: keep-all }'
         };
@@ -122,7 +122,7 @@ async function sample(pages, name, traced) {
       await sample(pages, variant, false);
     }
     for (const { context, errors } of pages) { assert.deepEqual(errors, []); await context.close(); }
-    assert.equal(report.phases.length, 7);
+    assert.equal(report.phases.length, 6);
     assert.equal(report.fonts.length, 3);
     report.completed = new Date().toISOString(); save();
   } finally {
