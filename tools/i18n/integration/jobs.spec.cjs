@@ -160,8 +160,11 @@ test('I20 completed job rerun and log deletion preserve original job values and 
     const rerun = await action(page, '$P().run_again()', 'app/run_event');
     expect(rerun.body.now).toBe(original.job.now);
     expect(rerun.body.params).toEqual(original.job.params);
+    // The original UI redirects asynchronously after rerun; let it finish before returning to the old job.
+    await page.waitForFunction(id => $P().args.id === id && !$P().jump_live_job_id, rerun.result.ids[0]);
     await completed(lab, session, rerun.result.ids[0]);
     await route(page, 'JobDetails?id=' + first.ids[0]);
+    await page.waitForFunction(id => $P().job && $P().job.id === id, first.ids[0]);
     const snapshot = await page.evaluate(() => JSON.parse(JSON.stringify($P().job)));
     let calls = 0;
     page.on('request', r => { if (r.url().endsWith('/app/delete_job')) calls++; });

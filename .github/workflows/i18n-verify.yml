@@ -21,7 +21,7 @@ permissions:
 jobs:
   verify:
     name: Full regression and three browsers
-    runs-on: ubuntu-24.04
+    runs-on: macos-15
     timeout-minutes: 45
     env:
       CI: 'true'
@@ -57,7 +57,7 @@ jobs:
         run: tools/i18n/node_modules/node/bin/node tools/i18n/ci-release.cjs
       - name: Preserve verification evidence
         if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: i18n-verification
           retention-days: 14
@@ -78,7 +78,7 @@ jobs:
             tools/i18n/out/cronicle-zh-CN-*.tar.gz
       - name: Preserve ready-to-publish attachments
         if: inputs.release_tag != '' && success()
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: i18n-release
           path: tools/i18n/out/release/
