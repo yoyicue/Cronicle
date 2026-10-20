@@ -49,7 +49,7 @@ A 为官方英文，B 为接入展示助手的英文，C 为中文。三套实�
 
 本次静态 releaseId 为 `9316382092d606588bb19bc0112db69dd6e179596f52c62a228868a742f19b8e`，包含 112 个常规静态文件，manifest 单独保存。两次隔离构建的静态内容相同，校验拒绝缺件、额外文件、越界、软链、内容篡改与陈旧 gzip，归档也检查 AppleDouble 元数据。
 
-本次本地归档 SHA-256 为 `68bfcfc117c16dede1c645e0153af9fab332bf2b716d298eb24ef90f36247643`。归档、manifest、原始结果和截图在忽略入仓的 `tools/i18n/out/`，本轮没有创建 GitHub Release。归档元数据可随构建时间变化，静态文件的内容哈希才是独立构建的比较依据。
+本次本地归档 SHA-256 为 `68bfcfc117c16dede1c645e0153af9fab332bf2b716d298eb24ef90f36247643`。归档、manifest、安装说明、校验和与本报告随 [zh-CN-v0.9.137-r1](https://github.com/yoyicue/Cronicle/releases/tag/zh-CN-v0.9.137-r1) 发布。原始测试结果和截图继续保存在忽略入仓的 `tools/i18n/out/`。归档元数据可随构建时间变化，静态文件的内容哈希才是独立构建的比较依据。
 
 ## 边界与已知问题
 

@@ -8,7 +8,11 @@
 - [验收结果及已知边界](tools/i18n/VALIDATION.md)
 - [官方英文文档](README.md)
 
-## 获取与验证
+## 下载已构建版本
+
+首个发布为 [zh-CN-v0.9.137-r1](https://github.com/yoyicue/Cronicle/releases/tag/zh-CN-v0.9.137-r1)，仅适配官方 `v0.9.137`。下载六个附件并校验 `SHA256SUMS`，按照[安装说明](tools/i18n/INSTALL.md)追加静态资源。使用发布包无需重新构建，也无需重启调度器。
+
+## 从源码构建与验证
 
 ```sh
 git clone --branch zh-CN https://github.com/yoyicue/Cronicle.git
