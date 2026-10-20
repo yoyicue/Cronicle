@@ -29,6 +29,8 @@ async function localPage(browser, lab, options = {}) {
   });
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(lab.url);
+  // The config/login callback renders after the document load event.
+  await expect(page.locator('#fe_login_username')).toBeVisible();
   return { page, context, errors, socketEvents, externalRequests };
 }
 async function login(page, username = 'admin', password = 'admin') {
