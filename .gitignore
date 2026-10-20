@@ -1,0 +1,11 @@
+node_modules/
+conf/
+data/
+logs/
+queue/
+work/
+.env
+tools/i18n/.work/
+tools/i18n/out/
+tools/i18n/test-results/
+tools/i18n/playwright-report/

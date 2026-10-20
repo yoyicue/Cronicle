@@ -1,0 +1,3431 @@
+{
+  "text.47d2a515ef2f": {
+    "en": "Loading...",
+    "zh": "加载中..."
+  },
+  "text.3a78695388b3": {
+    "en": "Home",
+    "zh": "首页"
+  },
+  "text.f4830a1dae29": {
+    "en": "Schedule",
+    "zh": "计划任务"
+  },
+  "text.22a970d2e5b1": {
+    "en": "Completed",
+    "zh": "执行历史"
+  },
+  "text.6cfe85387b7f": {
+    "en": "Job Details",
+    "zh": "作业详情"
+  },
+  "text.ad0187add790": {
+    "en": "My Account",
+    "zh": "我的账户"
+  },
+  "text.c1c224b03cd9": {
+    "en": "Admin",
+    "zh": "管理"
+  },
+  "text.d0527e4b3d65": {
+    "en": "Logout",
+    "zh": "退出登录"
+  },
+  "text.30b4217d8db7": {
+    "en": "Scheduler Enabled",
+    "zh": "调度器已启用"
+  },
+  "text.447a27273475": {
+    "en": "Scheduler Disabled",
+    "zh": "调度器已停用"
+  },
+  "text.df32432450f4": {
+    "en": "Toggle Scheduler",
+    "zh": "切换调度状态",
+    "dynamic": true
+  },
+  "text.5e9dc64e5ee5": {
+    "en": "Password strength indicator",
+    "zh": "密码强度"
+  },
+  "text.888c688c7507": {
+    "en": "The password you entered is",
+    "zh": "你输入的密码"
+  },
+  "text.1d92dae504a7": {
+    "en": "insecure",
+    "zh": "安全性不足"
+  },
+  "text.aed2484bc70b": {
+    "en": ", and could be easily compromised by hackers.  Our anaysis indicates that it could be cracked via brute force",
+    "zh": "，容易被攻击者破解。分析表明，暴力破解所需的时间为"
+  },
+  "text.b0ca998c298e": {
+    "en": ". For more details see",
+    "zh": "。详细说明见"
+  },
+  "text.9d1a4f8eef2d": {
+    "en": "this article",
+    "zh": "这篇文章"
+  },
+  "text.f6d5a06808c7": {
+    "en": "Do you really want to use this password?",
+    "zh": "确定使用这个密码吗？"
+  },
+  "text.b5f609d997b1": {
+    "en": "Waiting for master server...",
+    "zh": "正在等待主服务器…"
+  },
+  "text.dd167905de0d": {
+    "en": "Version",
+    "zh": "版本"
+  },
+  "text.d0c59d736b13": {
+    "en": "Logging out...",
+    "zh": "正在退出..."
+  },
+  "text.887faffa7636": {
+    "en": "Your session has expired.  Please log in again.",
+    "zh": "您的会话已过期，请重新登录。"
+  },
+  "text.1c11c521bbd2": {
+    "en": "You were logged out successfully.",
+    "zh": "您已成功退出登录。"
+  },
+  "text.09491d85ca1d": {
+    "en": "Logging in...",
+    "zh": "正在登录..."
+  },
+  "text.5a432808281e": {
+    "en": "Unknown login error.",
+    "zh": "未知登录错误。"
+  },
+  "text.a846d5dbb89b": {
+    "en": "Are you sure you want to",
+    "zh": "确定要"
+  },
+  "text.a32fe5b36ce7": {
+    "en": "the scheduler?",
+    "zh": "调度器吗？"
+  },
+  "text.66f14b7505f3": {
+    "en": "Scheduler has been",
+    "zh": "调度器已"
+  },
+  "text.fb9cf75606b4": {
+    "en": "enabled",
+    "zh": "启用"
+  },
+  "text.17eb3c0168d0": {
+    "en": "disabled",
+    "zh": "停用"
+  },
+  "text.ac20a57bfde0": {
+    "en": "Hide",
+    "zh": "隐藏"
+  },
+  "text.0df6f1cad36c": {
+    "en": "Show",
+    "zh": "显示"
+  },
+  "text.c0746c1c9c8d": {
+    "en": "Multiplexed",
+    "zh": "多机并行"
+  },
+  "text.c829bfbb6fb4": {
+    "en": "Username Taken",
+    "zh": "用户名已被使用"
+  },
+  "text.e674447337e8": {
+    "en": "Available",
+    "zh": "可用"
+  },
+  "text.3671673f4fce": {
+    "en": "Bad Username",
+    "zh": "用户名无效"
+  },
+  "text.89f6832560de": {
+    "en": "Year",
+    "zh": "年"
+  },
+  "text.310ca503ef36": {
+    "en": "Month",
+    "zh": "月"
+  },
+  "text.8f2364e11b8b": {
+    "en": "Day",
+    "zh": "日"
+  },
+  "text.f0063b808736": {
+    "en": "Hour",
+    "zh": "小时"
+  },
+  "text.4b78665bec78": {
+    "en": "Minute",
+    "zh": "分钟"
+  },
+  "text.39651ebf6d79": {
+    "en": "Timezone:",
+    "zh": "时区："
+  },
+  "text.914dc79e4818": {
+    "en": "Groups:",
+    "zh": "服务器组："
+  },
+  "text.d785dde3320d": {
+    "en": "Servers:",
+    "zh": "服务器："
+  },
+  "text.e5dea42d9c1e": {
+    "en": "(None)",
+    "zh": "无"
+  },
+  "text.4f846a84e7fc": {
+    "en": "Minutes",
+    "zh": "分钟"
+  },
+  "text.21e8492938ab": {
+    "en": "Hours",
+    "zh": "小时"
+  },
+  "text.e08c0aa8f558": {
+    "en": "Days",
+    "zh": "天"
+  },
+  "text.59281a6b2935": {
+    "en": "KB",
+    "zh": "KB"
+  },
+  "text.1d09f6fa2323": {
+    "en": "MB",
+    "zh": "MB"
+  },
+  "text.b4043b0b8297": {
+    "en": "GB",
+    "zh": "GB"
+  },
+  "text.791b0ac34874": {
+    "en": "TB",
+    "zh": "TB"
+  },
+  "text.4859a799651b": {
+    "en": "Filter by Event",
+    "zh": "按计划任务筛选"
+  },
+  "text.c88a0b907419": {
+    "en": "Success",
+    "zh": "成功"
+  },
+  "text.54a0e8c17ebb": {
+    "en": "Error",
+    "zh": "错误"
+  },
+  "text.65c9f97dcdb5": {
+    "en": "Event Stats",
+    "zh": "任务统计"
+  },
+  "text.6f775dfd9b17": {
+    "en": "EVENT NAME",
+    "zh": "计划任务名称"
+  },
+  "text.f55b3bc0c631": {
+    "en": "CATEGORY NAME",
+    "zh": "分类名称"
+  },
+  "text.c421afc1c4d3": {
+    "en": "EVENT TIMING",
+    "zh": "执行计划"
+  },
+  "text.766744e6f6b1": {
+    "en": "(Disabled)",
+    "zh": "已停用"
+  },
+  "text.2bc362d154ed": {
+    "en": "USERNAME",
+    "zh": "用户名"
+  },
+  "text.b76a83ce39b5": {
+    "en": "PLUGIN NAME",
+    "zh": "插件名称"
+  },
+  "text.297b98307e66": {
+    "en": "EVENT TARGET",
+    "zh": "执行目标"
+  },
+  "text.452757ac8645": {
+    "en": "AVG. ELAPSED",
+    "zh": "平均耗时"
+  },
+  "text.afe7b3ec49c5": {
+    "en": "AVG. CPU",
+    "zh": "平均 CPU"
+  },
+  "text.a2bffa198e02": {
+    "en": "AVG. MEMORY",
+    "zh": "平均内存"
+  },
+  "text.295760f04c12": {
+    "en": "SUCCESS RATE",
+    "zh": "成功率"
+  },
+  "text.9fc570116e4a": {
+    "en": "LAST RESULT",
+    "zh": "最近结果"
+  },
+  "text.cc479b6f7a4e": {
+    "en": "AVG. LOG SIZE",
+    "zh": "平均日志大小"
+  },
+  "text.beb8f0cc187c": {
+    "en": "Performance History",
+    "zh": "耗时历史"
+  },
+  "text.e4f2865c338e": {
+    "en": "CPU Usage History",
+    "zh": "CPU 使用历史"
+  },
+  "text.80bf83afa5ad": {
+    "en": "Memory Usage History",
+    "zh": "内存使用历史"
+  },
+  "text.0e7696009337": {
+    "en": "History",
+    "zh": "执行历史"
+  },
+  "text.1bf526092746": {
+    "en": "All Completed Jobs",
+    "zh": "所有已完成实例"
+  },
+  "text.2a5f7c3247c0": {
+    "en": "Job ID",
+    "zh": "执行实例 ID"
+  },
+  "text.61d517c594da": {
+    "en": "Event Name",
+    "zh": "计划任务名称"
+  },
+  "text.292c06f0045a": {
+    "en": "Category",
+    "zh": "分类"
+  },
+  "text.ab1173eed1d4": {
+    "en": "Plugin",
+    "zh": "插件"
+  },
+  "text.2db533557011": {
+    "en": "Hostname",
+    "zh": "主机名"
+  },
+  "text.6e7d50e84f47": {
+    "en": "Result",
+    "zh": "结果"
+  },
+  "text.6f0784b01531": {
+    "en": "Start Date/Time",
+    "zh": "开始日期和时间"
+  },
+  "text.2ddbad4846a2": {
+    "en": "Elapsed Time",
+    "zh": "耗时"
+  },
+  "text.a3122359e48d": {
+    "en": "All items were deleted on this page.",
+    "zh": "此页面的所有条目已删除。"
+  },
+  "text.52bec3cf2cf2": {
+    "en": "Could not locate event in schedule:",
+    "zh": "计划列表中找不到任务："
+  },
+  "text.a6f77567536d": {
+    "en": "Event Stats:",
+    "zh": "计划任务统计："
+  },
+  "text.85369c2f41a4": {
+    "en": "All Completed",
+    "zh": "全部完成"
+  },
+  "text.a6536f168947": {
+    "en": "Event History",
+    "zh": "任务历史"
+  },
+  "text.c657510e26c4": {
+    "en": "CPU Peak",
+    "zh": "CPU 峰值"
+  },
+  "text.346b4fabcd08": {
+    "en": "CPU Avg",
+    "zh": "CPU 平均"
+  },
+  "text.89d3705d5858": {
+    "en": "Mem Peak",
+    "zh": "内存峰值"
+  },
+  "text.4ac3905e1dec": {
+    "en": "Mem Avg",
+    "zh": "内存平均"
+  },
+  "text.9074cacff0ea": {
+    "en": "Event History:",
+    "zh": "计划任务历史："
+  },
+  "text.232b8fdf9d94": {
+    "en": "Avg CPU",
+    "zh": "平均 CPU"
+  },
+  "text.346c7e580e9e": {
+    "en": "Avg Mem",
+    "zh": "平均内存"
+  },
+  "text.75a665be0dd7": {
+    "en": "Find events...",
+    "zh": "查找任务..."
+  },
+  "text.b5be0854c77e": {
+    "en": "All Servers",
+    "zh": "全部服务器"
+  },
+  "text.70d13561bf00": {
+    "en": "All Plugins",
+    "zh": "全部插件"
+  },
+  "text.fe3b58f14752": {
+    "en": "All Categories",
+    "zh": "全部分类"
+  },
+  "text.cc0c3e77bea7": {
+    "en": "Server Stats",
+    "zh": "服务器统计"
+  },
+  "text.2f788f1663cb": {
+    "en": "TOTAL EVENTS",
+    "zh": "计划任务总数"
+  },
+  "text.babc07c7b0dd": {
+    "en": "TOTAL CATEGORIES",
+    "zh": "分类总数"
+  },
+  "text.8134390daa7a": {
+    "en": "TOTAL PLUGINS",
+    "zh": "插件总数"
+  },
+  "text.c2b2eea891d9": {
+    "en": "JOBS COMPLETED TODAY",
+    "zh": "今日完成实例"
+  },
+  "text.c56f607466e8": {
+    "en": "JOBS FAILED TODAY",
+    "zh": "今日失败实例"
+  },
+  "text.34dbaffc1ba7": {
+    "en": "JOB SUCCESS RATE",
+    "zh": "实例成功率"
+  },
+  "text.c22c51cb570a": {
+    "en": "TOTAL SERVERS",
+    "zh": "服务器总数"
+  },
+  "text.6483e0ed2e04": {
+    "en": "TOTAL CPU IN USE",
+    "zh": "CPU 使用总量"
+  },
+  "text.4332e0466252": {
+    "en": "TOTAL RAM IN USE",
+    "zh": "内存使用总量"
+  },
+  "text.fc01f4ada9d3": {
+    "en": "MASTER SERVER UPTIME",
+    "zh": "主服务器运行时间"
+  },
+  "text.436afaba9a58": {
+    "en": "AVERAGE JOB DURATION",
+    "zh": "实例平均耗时"
+  },
+  "text.f4c4038683a6": {
+    "en": "AVERAGE JOB LOG SIZE",
+    "zh": "实例平均日志大小"
+  },
+  "text.98057916eba6": {
+    "en": "Edit Event",
+    "zh": "编辑任务"
+  },
+  "text.75c9850ddc5a": {
+    "en": "Abort Job",
+    "zh": "中止执行实例"
+  },
+  "text.ba0c17458c0e": {
+    "en": "Flush Queue",
+    "zh": "清空队列"
+  },
+  "text.ca5c9367213b": {
+    "en": "Are you sure you want to abort the job",
+    "zh": "确定中止执行实例"
+  },
+  "text.683c9a28fd10": {
+    "en": "(Event:",
+    "zh": "计划任务："
+  },
+  "text.cef7fdd1d8eb": {
+    "en": "Flush Event Queue",
+    "zh": "清空计划任务队列"
+  },
+  "text.bbbda9ab1a07": {
+    "en": "Are you sure you want to flush the queue for event",
+    "zh": "确定清空以下计划任务的队列"
+  },
+  "text.af65ecd11c85": {
+    "en": "Active Jobs",
+    "zh": "运行中实例"
+  },
+  "text.680976a82a88": {
+    "en": "Event Queues",
+    "zh": "任务队列"
+  },
+  "text.e938bbbbbeab": {
+    "en": "Upcoming Events",
+    "zh": "待执行计划任务"
+  },
+  "text.978354db0c00": {
+    "en": "Target",
+    "zh": "目标"
+  },
+  "text.b89a7d74935d": {
+    "en": "Scheduled Time",
+    "zh": "计划时间"
+  },
+  "text.a9b7f3f14fe3": {
+    "en": "Countdown",
+    "zh": "倒计时"
+  },
+  "text.ff8059dc6752": {
+    "en": "Actions",
+    "zh": "操作"
+  },
+  "text.a194a68a45d3": {
+    "en": "Elapsed",
+    "zh": "耗时"
+  },
+  "text.4664827f8e89": {
+    "en": "Progress",
+    "zh": "进度"
+  },
+  "text.f3e4352a5df6": {
+    "en": "Remaining",
+    "zh": "剩余"
+  },
+  "text.a683c5c5349f": {
+    "en": "n/a",
+    "zh": "暂无"
+  },
+  "text.86c89e94ba7e": {
+    "en": "Queued Jobs",
+    "zh": "排队作业"
+  },
+  "text.7a3a94a8ca22": {
+    "en": "Abort",
+    "zh": "中止"
+  },
+  "text.0fd1bd05a36f": {
+    "en": "Aborting job...",
+    "zh": "正在中止作业..."
+  },
+  "text.8cb62498a32b": {
+    "en": "Job '",
+    "zh": "执行实例 '"
+  },
+  "text.b7ba86ecaa80": {
+    "en": "' was aborted successfully.",
+    "zh": "' 已成功中止。"
+  },
+  "text.1278166f1434": {
+    "en": "Flush",
+    "zh": "清空"
+  },
+  "text.6b9f54441239": {
+    "en": "Flushing event queue...",
+    "zh": "正在清空任务队列..."
+  },
+  "text.2ee92f5c8a26": {
+    "en": "Event queue for '",
+    "zh": "计划任务队列 '"
+  },
+  "text.46d30f4f2dd5": {
+    "en": "' was flushed successfully.",
+    "zh": "' 已成功清空。"
+  },
+  "text.942087cc2d41": {
+    "en": "Retry",
+    "zh": "重试"
+  },
+  "text.331551b0de41": {
+    "en": "Pending",
+    "zh": "待处理"
+  },
+  "text.b58e4ff842e4": {
+    "en": "Delete Job",
+    "zh": "删除执行实例"
+  },
+  "text.685705479051": {
+    "en": "Run Again",
+    "zh": "再次运行"
+  },
+  "text.aa967effefb0": {
+    "en": "JOB ID",
+    "zh": "执行实例 ID"
+  },
+  "text.fc5c434ce8de": {
+    "en": "JOB SOURCE",
+    "zh": "触发来源"
+  },
+  "text.82157912c018": {
+    "en": "SERVER HOSTNAME",
+    "zh": "服务器主机名"
+  },
+  "text.ac72616fe76b": {
+    "en": "PROCESS ID",
+    "zh": "进程 ID"
+  },
+  "text.5074ea9610ec": {
+    "en": "JOB STARTED",
+    "zh": "开始时间"
+  },
+  "text.93cba4ba24e9": {
+    "en": "Scheduled Time:",
+    "zh": "计划时间："
+  },
+  "text.577de84b6302": {
+    "en": "JOB COMPLETED",
+    "zh": "完成时间"
+  },
+  "text.f4c4d01a4c53": {
+    "en": "ELAPSED TIME",
+    "zh": "已用时间"
+  },
+  "text.f34186f67a38": {
+    "en": "Performance Metrics",
+    "zh": "性能指标"
+  },
+  "text.a620acd4ebe7": {
+    "en": "Memory Usage",
+    "zh": "内存使用"
+  },
+  "text.d7d31960da65": {
+    "en": "CPU Usage",
+    "zh": "CPU 使用"
+  },
+  "text.bee52f6979e1": {
+    "en": "View Full Log",
+    "zh": "查看完整日志"
+  },
+  "text.3b879d64450c": {
+    "en": "Download Log",
+    "zh": "下载日志"
+  },
+  "text.6f0251fadc25": {
+    "en": "Warning: Job event log file is",
+    "zh": "提示：实例日志大小为"
+  },
+  "text.e11adf2f6f2c": {
+    "en": ".  Please consider downloading instead of viewing in browser.",
+    "zh": "。建议下载日志后查看，避免浏览器加载大文件。"
+  },
+  "text.a76646e2d2c2": {
+    "en": "View Log",
+    "zh": "查看日志"
+  },
+  "text.b38ae2c5b845": {
+    "en": "Average",
+    "zh": "平均值"
+  },
+  "text.d319c28c2d23": {
+    "en": "MIN",
+    "zh": "最小值"
+  },
+  "text.c797f4a5fc3c": {
+    "en": "PEAK",
+    "zh": "峰值"
+  },
+  "text.8b44601c4a89": {
+    "en": "Watch Job",
+    "zh": "关注执行实例"
+  },
+  "text.704337e18e18": {
+    "en": "REMAINING TIME",
+    "zh": "剩余时间"
+  },
+  "text.8557494e3ce8": {
+    "en": "Job Progress",
+    "zh": "执行进度"
+  },
+  "text.57fd2dcbb585": {
+    "en": "Log Watcher: Connecting to server:",
+    "zh": "日志查看器：正在连接服务器："
+  },
+  "text.17f5958ed43c": {
+    "en": "Log Watcher: Connected successfully!",
+    "zh": "日志查看器：连接成功！"
+  },
+  "text.1188a5adafe6": {
+    "en": "Log Watcher: Server Connect Error:",
+    "zh": "日志查看器：服务器连接失败："
+  },
+  "text.ad4931153df9": {
+    "en": "Log Watcher: Server Connect Timeout:",
+    "zh": "日志查看器：服务器连接超时："
+  },
+  "text.e0d1b68224bf": {
+    "en": "Current",
+    "zh": "当前值"
+  },
+  "text.b12e44dfe43b": {
+    "en": "AVERAGE",
+    "zh": "平均值"
+  },
+  "text.b2b787ae5577": {
+    "en": "The Job Details page requires a Job ID.",
+    "zh": "作业详情页需要作业 ID。"
+  },
+  "text.837ab093ecd9": {
+    "en": "Job Details: #",
+    "zh": "作业详情：#"
+  },
+  "text.617062906764": {
+    "en": "Error:",
+    "zh": "错误："
+  },
+  "text.2ab04d96a626": {
+    "en": "Are you sure you want to delete the current job log and history?",
+    "zh": "确定要删除当前作业的日志与历史记录吗？"
+  },
+  "text.e2d0a54968ea": {
+    "en": "Delete",
+    "zh": "删除"
+  },
+  "text.223fa8823d04": {
+    "en": "Deleting job...",
+    "zh": "正在删除作业..."
+  },
+  "text.eb1969c14163": {
+    "en": "Job ID '",
+    "zh": "作业 ID '"
+  },
+  "text.2e6deb759b2c": {
+    "en": "' was deleted successfully.",
+    "zh": "' 已成功删除。"
+  },
+  "text.4920fc94d01a": {
+    "en": "Starting job...",
+    "zh": "正在启动作业..."
+  },
+  "text.83dcf4de22b0": {
+    "en": "Completed Job",
+    "zh": "已完成的作业"
+  },
+  "text.57ac0a07423e": {
+    "en": "(Unknown)",
+    "zh": "未知"
+  },
+  "text.956cf8a489ab": {
+    "en": "Job Event Log",
+    "zh": "作业事件日志"
+  },
+  "text.491f22519ad1": {
+    "en": "Are you sure you want to abort the current job?",
+    "zh": "确定要中止当前作业吗？"
+  },
+  "text.6a5e010c98ee": {
+    "en": "You will now be notified via e-mail when the job completes (success or fail).",
+    "zh": "作业完成（成功或失败）后，你将收到电子邮件通知。"
+  },
+  "text.5a4086d7df2f": {
+    "en": "You will no longer be notified about this job.",
+    "zh": "你将不再收到此作业的通知。"
+  },
+  "text.4ab551c44c64": {
+    "en": "Live Job Progress",
+    "zh": "实时作业进度"
+  },
+  "text.a2aac8fa0213": {
+    "en": "Retry in",
+    "zh": "重试倒计时"
+  },
+  "text.68387e32ad0e": {
+    "en": "Live Job Event Log",
+    "zh": "实时作业事件日志"
+  },
+  "text.cf355cbc6154": {
+    "en": "Job is finishing...",
+    "zh": "作业正在结束..."
+  },
+  "text.736fce87aa9a": {
+    "en": "User Login",
+    "zh": "用户登录"
+  },
+  "text.3806d61c3406": {
+    "en": "Username:",
+    "zh": "用户名："
+  },
+  "text.569b2482a687": {
+    "en": "Password:",
+    "zh": "密码："
+  },
+  "text.939a494aadb6": {
+    "en": "Create Account...",
+    "zh": "创建账户..."
+  },
+  "text.cf7bc2aaa119": {
+    "en": "Forgot Password...",
+    "zh": "忘记密码..."
+  },
+  "text.9d6322c1f4d9": {
+    "en": "Login",
+    "zh": "登录"
+  },
+  "text.0dffe234b447": {
+    "en": "Create Account",
+    "zh": "创建账号"
+  },
+  "text.19766ed6ccb2": {
+    "en": "Cancel",
+    "zh": "取消"
+  },
+  "text.4759498ac2a7": {
+    "en": "Create",
+    "zh": "创建"
+  },
+  "text.5ba602c0a3c2": {
+    "en": "Insecure Password Warning",
+    "zh": "密码安全提示"
+  },
+  "text.fdfd41de7ae5": {
+    "en": "Forgot Password",
+    "zh": "忘记密码"
+  },
+  "text.78ae0ed8f17b": {
+    "en": "Please enter the username and e-mail address associated with your account, and we will send you instructions for resetting your password.",
+    "zh": "请输入账户绑定的用户名和邮箱，我们会发送密码重置说明。"
+  },
+  "text.5908bccf2211": {
+    "en": "Send Email",
+    "zh": "发送邮件"
+  },
+  "text.4e70f1fd24ba": {
+    "en": "Reset Password",
+    "zh": "重置密码"
+  },
+  "text.84c91b4b25f2": {
+    "en": "New Password:",
+    "zh": "新密码："
+  },
+  "text.773804d21547": {
+    "en": "Choose a unique alphanumeric username for your account.",
+    "zh": "请为你的账户选择一个唯一的字母数字用户名。"
+  },
+  "text.74feccb8a6f4": {
+    "en": "Enter a secure password that you will not forget.",
+    "zh": "请输入一个安全且不会忘记的密码。"
+  },
+  "text.5a3afe31be77": {
+    "en": "Full Name:",
+    "zh": "姓名："
+  },
+  "text.3f6ee201e2c8": {
+    "en": "This is used for display purposes only.",
+    "zh": "仅用于显示。"
+  },
+  "text.a93d4dd3b6f4": {
+    "en": "Email Address:",
+    "zh": "邮箱地址："
+  },
+  "text.14060a4ed73f": {
+    "en": "This is used only to recover your password should you lose it.",
+    "zh": "仅用于在你丢失密码时找回密码。"
+  },
+  "text.730be54db3de": {
+    "en": "Please enter a username for your account.",
+    "zh": "请输入你的账户用户名。"
+  },
+  "text.32d9358828bb": {
+    "en": "Please make sure your username contains only alphanumerics, dashes and periods.",
+    "zh": "请确保用户名只包含字母、数字、连字符和句点。"
+  },
+  "text.3a4b865db04a": {
+    "en": "Please enter an e-mail address where you can be reached.",
+    "zh": "请输入可以联系到你的电子邮箱地址。"
+  },
+  "text.33c9870225c7": {
+    "en": "The e-mail address you entered does not appear to be correct.",
+    "zh": "您输入的电子邮件地址似乎不正确。"
+  },
+  "text.c6c8499a1e5f": {
+    "en": "Please enter your first and last names. These are used only for display purposes.",
+    "zh": "请输入你的姓名，仅用于界面显示。"
+  },
+  "text.614793c25644": {
+    "en": "Please enter a secure password to protect your account.",
+    "zh": "请输入安全密码以保护你的账户。"
+  },
+  "text.f01847dfc941": {
+    "en": "Proceed",
+    "zh": "继续"
+  },
+  "text.7dd3701aa3f1": {
+    "en": "Creating account...",
+    "zh": "正在创建账户..."
+  },
+  "text.948847ba1af8": {
+    "en": "Account created successfully.",
+    "zh": "账户创建成功。"
+  },
+  "text.e94cfc7454f4": {
+    "en": "Sending e-mail...",
+    "zh": "正在发送邮件..."
+  },
+  "text.61b0ea070b53": {
+    "en": "Password reset instructions sent successfully.",
+    "zh": "密码重置说明发送成功。"
+  },
+  "text.2c53ed792baa": {
+    "en": "The username you entered does not appear to be correct.",
+    "zh": "你输入的用户名似乎不正确。"
+  },
+  "text.daef019f06a4": {
+    "en": "Resetting password...",
+    "zh": "正在重置密码..."
+  },
+  "text.3b5530a32853": {
+    "en": "Your password was reset successfully.",
+    "zh": "密码重置成功。"
+  },
+  "text.82a6c3bac651": {
+    "en": "This is used to generate your profile pic, and to",
+    "zh": "用于生成头像，以及在"
+  },
+  "text.8e9af3f9f20b": {
+    "en": "recover your password if you forget it.",
+    "zh": "忘记密码时找回密码。"
+  },
+  "text.aa47cfbe170f": {
+    "en": "Delete Account...",
+    "zh": "删除账户..."
+  },
+  "text.35322b5bb5a2": {
+    "en": "Save Changes",
+    "zh": "保存更改"
+  },
+  "text.53f0a0b894ad": {
+    "en": "Profile Picture",
+    "zh": "账户头像"
+  },
+  "text.2cdeb0a7db29": {
+    "en": "Edit Image...",
+    "zh": "编辑头像..."
+  },
+  "text.fc6b78dbd8ad": {
+    "en": "Image services provided by",
+    "zh": "头像服务提供方："
+  },
+  "text.f953cf499e91": {
+    "en": "permanently delete",
+    "zh": "永久删除"
+  },
+  "text.0410cf4b5f59": {
+    "en": "your user account?  There is no way to undo this action, and no way to recover your data.",
+    "zh": "你的账户吗？此操作无法撤销，相关数据也无法恢复。"
+  },
+  "text.e3b89e9d33f8": {
+    "en": "Username",
+    "zh": "用户名"
+  },
+  "text.3dea9b196155": {
+    "en": "Your username cannot be changed.",
+    "zh": "用户名不可更改。"
+  },
+  "text.8e00cdf71fa7": {
+    "en": "Full Name",
+    "zh": "姓名"
+  },
+  "text.d62fec1378ee": {
+    "en": "Your first and last names, used for display purposes only.",
+    "zh": "你的姓和名，仅用于显示。"
+  },
+  "text.09bf25ef3083": {
+    "en": "Email Address",
+    "zh": "电子邮箱"
+  },
+  "text.8ac76099cc66": {
+    "en": "Current Password",
+    "zh": "当前密码"
+  },
+  "text.2b74bdd38bcd": {
+    "en": "Enter your current account password to make changes.",
+    "zh": "请输入当前账户密码以进行更改。"
+  },
+  "text.7c451e0f436d": {
+    "en": "New Password",
+    "zh": "新密码"
+  },
+  "text.9b7d30a57006": {
+    "en": "If you need to change your password, enter the new one here.",
+    "zh": "如需更改密码，请在此输入新密码。"
+  },
+  "text.fadbbff6b249": {
+    "en": "Users are managed by an external system, so you cannot make changes here.",
+    "zh": "用户由外部系统管理，因此您无法在此进行修改。"
+  },
+  "text.b9795f19ec4d": {
+    "en": "Please enter your current account password to make changes.",
+    "zh": "请输入当前账户密码以进行更改。"
+  },
+  "text.8b9e23315cff": {
+    "en": "Saving account...",
+    "zh": "正在保存账户..."
+  },
+  "text.2d10241234dd": {
+    "en": "Your account settings were updated successfully.",
+    "zh": "账户设置已成功更新。"
+  },
+  "text.c46b22e9fcd2": {
+    "en": "Please enter your current account password.",
+    "zh": "请输入当前账户密码。"
+  },
+  "text.c0d7e5169e1e": {
+    "en": "Delete My Account",
+    "zh": "删除我的账户"
+  },
+  "text.f20aabb025c8": {
+    "en": "Deleting Account...",
+    "zh": "正在删除账户..."
+  },
+  "text.6e72499aa0e1": {
+    "en": "All Events",
+    "zh": "全部计划任务"
+  },
+  "text.c7c445626b98": {
+    "en": "Sort by Title",
+    "zh": "按名称排序"
+  },
+  "text.8711109f9a3b": {
+    "en": "Group by Category",
+    "zh": "按分类分组"
+  },
+  "text.37275592b9ca": {
+    "en": "Group by Plugin",
+    "zh": "按插件分组"
+  },
+  "text.daa91aa7c3ec": {
+    "en": "Group by Target",
+    "zh": "按执行目标分组"
+  },
+  "text.00d60e31a4e6": {
+    "en": "Run",
+    "zh": "运行"
+  },
+  "text.464c4ffd019e": {
+    "en": "Edit",
+    "zh": "编辑"
+  },
+  "text.b4a7365740ef": {
+    "en": "Stats",
+    "zh": "统计"
+  },
+  "text.286d44872589": {
+    "en": "Add Event...",
+    "zh": "新建计划任务..."
+  },
+  "text.1eb7d30ed685": {
+    "en": "Running (",
+    "zh": "运行中 ("
+  },
+  "text.a1937e7c9c1b": {
+    "en": "Are you sure you want to delete the event",
+    "zh": "确定删除计划任务"
+  },
+  "text.bea8ce46da62": {
+    "en": "Delete Event",
+    "zh": "删除任务"
+  },
+  "text.cfb1ace72b02": {
+    "en": "Add New Event",
+    "zh": "新建任务"
+  },
+  "text.7a9f7d429145": {
+    "en": "Create Event",
+    "zh": "创建计划任务"
+  },
+  "text.55f1d9790bfb": {
+    "en": "Jump to History",
+    "zh": "跳到历史"
+  },
+  "text.37629e5ff9f6": {
+    "en": "Jump to Stats",
+    "zh": "跳到统计"
+  },
+  "text.e10dd495fc27": {
+    "en": "Delete Event...",
+    "zh": "删除计划任务..."
+  },
+  "text.8f7a349c9415": {
+    "en": "Copy Event...",
+    "zh": "复制计划任务..."
+  },
+  "text.849ccb784cf3": {
+    "en": "Run Now",
+    "zh": "立即运行"
+  },
+  "text.730dabc47be8": {
+    "en": "Abort Jobs",
+    "zh": "中止执行实例"
+  },
+  "text.e948d191e403": {
+    "en": "There",
+    "zh": "当前"
+  },
+  "text.ba78973ddcf9": {
+    "en": "are",
+    "zh": "有"
+  },
+  "text.fa51fd49abf6": {
+    "en": "is",
+    "zh": "有"
+  },
+  "text.af57585178e6": {
+    "en": "currently still",
+    "zh": "仍有"
+  },
+  "text.96879611650f": {
+    "en": "active",
+    "zh": "运行中的"
+  },
+  "text.a874a15d2f78": {
+    "en": "using the disabled event",
+    "zh": "属于已停用的计划任务"
+  },
+  "text.bd56411d9518": {
+    "en": ".  Do you want to abort",
+    "zh": "。确定中止"
+  },
+  "text.b808e156d18d": {
+    "en": "these",
+    "zh": "这些实例"
+  },
+  "text.2ad8a7049d7c": {
+    "en": "it",
+    "zh": "此实例"
+  },
+  "text.f7cdbdf1bc8e": {
+    "en": "now?",
+    "zh": "吗？"
+  },
+  "text.f35031577fd1": {
+    "en": "Event Enabled",
+    "zh": "启用任务"
+  },
+  "text.f9309f314e4c": {
+    "en": "Select Category",
+    "zh": "选择分类"
+  },
+  "text.ff597027eaca": {
+    "en": "Add New Category",
+    "zh": "新增分类"
+  },
+  "text.72397e25f7f8": {
+    "en": "Add New...",
+    "zh": "新增..."
+  },
+  "text.3635fbc413c9": {
+    "en": "Select the desired algorithm for choosing a server from the target group.",
+    "zh": "选择从目标服务器组中选取服务器的算法。"
+  },
+  "text.afabecef026c": {
+    "en": "'Multiplex' means that the event will run on",
+    "zh": "“多机并行”表示计划任务会在"
+  },
+  "text.5ef5ef0364b6": {
+    "en": "all",
+    "zh": "所有"
+  },
+  "text.197382887e1a": {
+    "en": "group servers simultaneously.",
+    "zh": "组内服务器上同时运行。"
+  },
+  "text.3137c513238d": {
+    "en": "For multiplexed events, optionally stagger the jobs across the servers.",
+    "zh": "多机并行时，可设置各服务器依次启动的间隔。"
+  },
+  "text.6fbbd449e6db": {
+    "en": "Each server will delay its launch by a multiple of the specified time.",
+    "zh": "每台服务器将按指定时间的倍数延迟启动。"
+  },
+  "text.8ed403fc5aef": {
+    "en": "Select Plugin",
+    "zh": "选择插件"
+  },
+  "text.265caf802c9b": {
+    "en": "Import from Crontab",
+    "zh": "从 Crontab 导入"
+  },
+  "text.84620cbec387": {
+    "en": "Import...",
+    "zh": "导入..."
+  },
+  "text.13ade4e19f41": {
+    "en": "Delay:",
+    "zh": "延迟："
+  },
+  "text.ce298bd1e567": {
+    "en": "Catch-Up (Run All)",
+    "zh": "补跑全部遗漏实例"
+  },
+  "text.6cfa58f65704": {
+    "en": "Automatically run all missed events after server downtime or scheduler/event disabled.",
+    "zh": "自动补跑服务器停机、调度器停用或计划任务停用期间遗漏的执行实例。"
+  },
+  "text.99a170c9edb8": {
+    "en": "Detached (Uninterruptible)",
+    "zh": "独立后台运行"
+  },
+  "text.190ef27fa47c": {
+    "en": "Run event as a detached background process that is never interrupted.",
+    "zh": "作为独立后台进程运行，不随调度器中断。"
+  },
+  "text.6331708a27cd": {
+    "en": "Allow Queued Jobs",
+    "zh": "允许排队"
+  },
+  "text.cdb1054b8b4f": {
+    "en": "Jobs that cannot run immediately will be queued.",
+    "zh": "无法立即运行的实例将进入队列。"
+  },
+  "text.67de5fff542d": {
+    "en": "Set Event Clock:",
+    "zh": "设置任务时钟："
+  },
+  "text.daee7606b339": {
+    "en": "Reset",
+    "zh": "重置"
+  },
+  "text.9a89d060f6b6": {
+    "en": "Chain Options",
+    "zh": "后续任务"
+  },
+  "text.b32c1864eaf3": {
+    "en": "Run Event on Success:",
+    "zh": "成功后运行："
+  },
+  "text.c93f8096ad42": {
+    "en": "Run Event on Failure:",
+    "zh": "失败后运行："
+  },
+  "text.513a30357189": {
+    "en": "Notification Options",
+    "zh": "通知设置"
+  },
+  "text.4a2c7ef3a07d": {
+    "en": "Email on Success:",
+    "zh": "成功通知邮箱："
+  },
+  "text.95ced14d2203": {
+    "en": "Email on Failure:",
+    "zh": "失败通知邮箱："
+  },
+  "text.9e9ea6e12ec2": {
+    "en": "Web Hook URL:",
+    "zh": "Webhook 地址："
+  },
+  "text.8c84b27f8f96": {
+    "en": "Resource Limits",
+    "zh": "资源限制"
+  },
+  "text.bc989edbbb58": {
+    "en": "CPU Limit:",
+    "zh": "CPU 限制："
+  },
+  "text.dd46b8e1c0d2": {
+    "en": "Abort job if CPU exceeds",
+    "zh": "中止条件：CPU 使用超过"
+  },
+  "text.10c22bcf4c76": {
+    "en": "for",
+    "zh": "持续"
+  },
+  "text.7c22d4d1465a": {
+    "en": "Memory Limit:",
+    "zh": "内存限制："
+  },
+  "text.b96d15adf906": {
+    "en": "Abort job if memory exceeds",
+    "zh": "中止条件：内存使用超过"
+  },
+  "text.4adc2d20f8fc": {
+    "en": "Log Size Limit:",
+    "zh": "日志大小限制："
+  },
+  "text.408a3bf2c685": {
+    "en": "Abort job if log file exceeds",
+    "zh": "日志文件大小超过时中止实例"
+  },
+  "text.0c87b7de1922": {
+    "en": "Use this to import event timing settings from a",
+    "zh": "使用以下格式导入执行计划："
+  },
+  "text.d5d9164eb385": {
+    "en": "Crontab expression",
+    "zh": "cron 表达式"
+  },
+  "text.db0dd37cc15c": {
+    "en": ".  This is a string comprising five (or six) fields separated by white space that represents a set of dates/times.  Example:",
+    "zh": "。该表达式由空白分隔的五个或六个字段组成，用于表示执行时间。例如："
+  },
+  "text.def1110bbb90": {
+    "en": "(First day of every month at 4:30 AM)",
+    "zh": "每月第一天 04:30"
+  },
+  "text.4aaf36852aca": {
+    "en": "Use this to quickly add a new category.  Note that you should visit the Admin Categories page later so you can set additional options, add a descripton, etc.",
+    "zh": "快速新增分类。之后可在管理页的分类模块中补充设置和说明。"
+  },
+  "text.6f65aa935f15": {
+    "en": "Quick Add Category",
+    "zh": "快速新增分类"
+  },
+  "text.3be48037716a": {
+    "en": "Timing Details",
+    "zh": "执行计划明细"
+  },
+  "text.b68ca0811f13": {
+    "en": "Years",
+    "zh": "年份"
+  },
+  "text.09ca7551b3e9": {
+    "en": "Months",
+    "zh": "月份"
+  },
+  "text.6f4b602bb529": {
+    "en": "Weekdays",
+    "zh": "星期"
+  },
+  "text.a79c837dd5c0": {
+    "en": "Days of the Month",
+    "zh": "每月日期"
+  },
+  "text.0264d7b0ccb8": {
+    "en": "Show Less",
+    "zh": "收起"
+  },
+  "text.e1c32645f2f8": {
+    "en": "Show All",
+    "zh": "显示全部"
+  },
+  "text.6fd45a593b17": {
+    "en": "The event will run:",
+    "zh": "计划任务将在以下时间运行："
+  },
+  "text.d6db9b17e9f1": {
+    "en": "Choose when and how often the event should run.",
+    "zh": "选择执行时间和频率。"
+  },
+  "text.5ff931bb727f": {
+    "en": "Plugin Parameters",
+    "zh": "插件参数"
+  },
+  "text.2a727ee191cb": {
+    "en": "Select the plugin parameters for the event.",
+    "zh": "配置此计划任务的插件参数。"
+  },
+  "text.02fb9479e297": {
+    "en": "The selected plugin has no editable parameters.",
+    "zh": "所选插件没有可编辑参数。"
+  },
+  "text.ae7767364933": {
+    "en": "Select a plugin to edit its parameters.",
+    "zh": "选择插件后可编辑其参数。"
+  },
+  "text.cde83b51433e": {
+    "en": "Scheduled Events",
+    "zh": "计划任务"
+  },
+  "text.fc4e84255a41": {
+    "en": "Timing",
+    "zh": "定时"
+  },
+  "text.920e413c7d41": {
+    "en": "Status",
+    "zh": "状态"
+  },
+  "text.92c1cdfdf4cb": {
+    "en": "Enabled",
+    "zh": "已启用"
+  },
+  "text.75081b593d15": {
+    "en": "Disabled",
+    "zh": "已停用"
+  },
+  "text.1166190a467d": {
+    "en": "Last Run Success",
+    "zh": "最近运行成功"
+  },
+  "text.c51a52cbf3f2": {
+    "en": "Last Run Error",
+    "zh": "最近运行失败"
+  },
+  "text.26ae364cb0ec": {
+    "en": "Event '",
+    "zh": "任务 '"
+  },
+  "text.fa1c69410109": {
+    "en": "' has been",
+    "zh": "' 已"
+  },
+  "text.a41e106ef161": {
+    "en": "Set Current Event Date/Time",
+    "zh": "设置本次运行的日期和时间"
+  },
+  "text.2f0700868938": {
+    "en": "Configure the internal date/time for the event to run immediately.  This is the timestamp which the Plugin will see as the current time.",
+    "zh": "设置本次立即运行使用的内部时间，插件将以此时间戳作为当前时间。"
+  },
+  "text.501282a221bf": {
+    "en": "Are you sure you want to run the event \"",
+    "zh": "确定立即运行计划任务 \""
+  },
+  "text.f058812b824b": {
+    "en": "\" now?",
+    "zh": "\" 吗？"
+  },
+  "text.0107a1c41b69": {
+    "en": "Run Event Now",
+    "zh": "立即运行任务"
+  },
+  "text.649bb341a9bf": {
+    "en": "Event \"",
+    "zh": "任务 \""
+  },
+  "text.59fb2dbc2499": {
+    "en": "\" has been started (",
+    "zh": "\" 已启动 ("
+  },
+  "text.fa00659cb8f5": {
+    "en": "jobs).  View their progress on the Home Tab.",
+    "zh": "个实例)。可在首页查看进度。"
+  },
+  "text.b663b4ee2555": {
+    "en": "\" has been started.  View its progress on the Home Tab.",
+    "zh": "\" 已启动。可在首页查看进度。"
+  },
+  "text.6dd84a357b24": {
+    "en": "\" could not run right away, but was queued up.  View the queue progress on the Home Tab.",
+    "zh": "\" 暂时无法立即运行，已加入队列。可在首页查看队列进度。"
+  },
+  "text.824caf24a2ce": {
+    "en": "Sorry, you cannot delete an event that has active jobs running.",
+    "zh": "抱歉，无法删除仍有作业正在运行的任务。"
+  },
+  "text.9b3f6cdb690a": {
+    "en": "The event's job queue will also be flushed.",
+    "zh": "该计划任务的执行队列也会被清空。"
+  },
+  "text.fda93d82b865": {
+    "en": "There is no way to undo this action.",
+    "zh": "此操作无法撤销。"
+  },
+  "text.b35382b80c49": {
+    "en": "Deleting Event...",
+    "zh": "正在删除任务..."
+  },
+  "text.71161b169029": {
+    "en": "Creating event...",
+    "zh": "正在创建任务..."
+  },
+  "text.7b058fe5347c": {
+    "en": "' was created successfully.",
+    "zh": "' 已成功创建。"
+  },
+  "text.0d77b9757a72": {
+    "en": "Could not locate Event with ID:",
+    "zh": "找不到指定 ID 的计划任务："
+  },
+  "text.4b3dea963915": {
+    "en": "Editing Event \"",
+    "zh": "编辑计划任务 \""
+  },
+  "text.c21953f302ee": {
+    "en": "Editing Event",
+    "zh": "编辑计划任务"
+  },
+  "text.3045abafb173": {
+    "en": "Event ID",
+    "zh": "任务 ID"
+  },
+  "text.4276c5b5db29": {
+    "en": "The internal event ID used for API calls.  This cannot be changed.",
+    "zh": "供 API 调用的内部任务 ID，不可更改。"
+  },
+  "text.9bab4cd0159a": {
+    "en": "Saving event...",
+    "zh": "正在保存任务..."
+  },
+  "text.28bc416f92f7": {
+    "en": "The event was saved successfully.",
+    "zh": "任务保存成功。"
+  },
+  "text.943989dfaff5": {
+    "en": "Aborting",
+    "zh": "正在中止"
+  },
+  "text.b344d80e24a3": {
+    "en": "The",
+    "zh": "这些"
+  },
+  "text.910adfb42464": {
+    "en": "were",
+    "zh": "已"
+  },
+  "text.b63b99f6383b": {
+    "en": "was",
+    "zh": "已"
+  },
+  "text.10b2c0a7f906": {
+    "en": "aborted successfully.",
+    "zh": "已成功中止。"
+  },
+  "text.1b50f9f18f99": {
+    "en": "No jobs were aborted.  It is likely they completed while the dialog was up.",
+    "zh": "没有作业被中止。它们很可能在对话框打开期间已完成。"
+  },
+  "text.a1e72f80edf7": {
+    "en": "Update Jobs",
+    "zh": "更新作业"
+  },
+  "text.1f0010a89adc": {
+    "en": "This event currently has",
+    "zh": "该计划任务当前有"
+  },
+  "text.35403c8a0f1e": {
+    "en": "as well?",
+    "zh": "吗？"
+  },
+  "text.c1c1009d3f37": {
+    "en": "Update",
+    "zh": "更新"
+  },
+  "text.0b5260e1b405": {
+    "en": "Updating",
+    "zh": "正在更新"
+  },
+  "text.fa2bbd043a8b": {
+    "en": "updated successfully.",
+    "zh": "已成功更新。"
+  },
+  "text.6fa449f3a20a": {
+    "en": "No jobs were updated.  It is likely they completed while the dialog was up.",
+    "zh": "没有作业被更新，很可能它们在对话框打开期间已完成。"
+  },
+  "text.1fbe9376963c": {
+    "en": "Enter a title for the event, which will be displayed on the main schedule.",
+    "zh": "输入任务名称，显示在主计划页。"
+  },
+  "text.0135783d4594": {
+    "en": "Select whether the event should be enabled or disabled in the schedule.",
+    "zh": "选择该任务在计划中是否启用。"
+  },
+  "text.845bd63939b9": {
+    "en": "Select a category for the event (this may limit the max concurrent jobs, etc.)",
+    "zh": "选择任务分类（可能限制最大并发等）。"
+  },
+  "text.489c7bf62d1a": {
+    "en": "Select a target server group or individual server to run the event on.",
+    "zh": "选择执行任务的目标服务器组或单机。"
+  },
+  "text.67bc484430fe": {
+    "en": "Random",
+    "zh": "随机"
+  },
+  "text.1c0a486688ee": {
+    "en": "Round Robin",
+    "zh": "轮询"
+  },
+  "text.3ae0559303c9": {
+    "en": "Least CPU Usage",
+    "zh": "CPU 使用率最低"
+  },
+  "text.e61f32048a74": {
+    "en": "Least Memory Usage",
+    "zh": "内存使用率最低"
+  },
+  "text.3d5efa0cb7ba": {
+    "en": "Prefer First (Alphabetically)",
+    "zh": "优先首台，按名称排序"
+  },
+  "text.587a6363e79d": {
+    "en": "Prefer Last (Alphabetically)",
+    "zh": "优先末台，按名称排序"
+  },
+  "text.d01704857f44": {
+    "en": "Multiplex",
+    "zh": "多路并发"
+  },
+  "text.d704d8af25be": {
+    "en": "Algorithm",
+    "zh": "算法"
+  },
+  "text.b575a12ff474": {
+    "en": "Stagger",
+    "zh": "错峰"
+  },
+  "text.381a8e969905": {
+    "en": "Seconds",
+    "zh": "秒"
+  },
+  "text.d86affbd5b6c": {
+    "en": "On Demand",
+    "zh": "按需"
+  },
+  "text.494ca78f7374": {
+    "en": "Custom",
+    "zh": "自定义"
+  },
+  "text.6e69b59ed34d": {
+    "en": "Yearly",
+    "zh": "每年"
+  },
+  "text.9b11f6b707d2": {
+    "en": "Monthly",
+    "zh": "每月"
+  },
+  "text.2975132481a7": {
+    "en": "Weekly",
+    "zh": "每周"
+  },
+  "text.b36c2611dcdf": {
+    "en": "Daily",
+    "zh": "每日"
+  },
+  "text.eab0cd8fdf9b": {
+    "en": "Hourly",
+    "zh": "每小时"
+  },
+  "text.8708492f3ef5": {
+    "en": "Concurrency",
+    "zh": "并发数"
+  },
+  "text.d4235c614740": {
+    "en": "1 (Singleton)",
+    "zh": "1，单实例"
+  },
+  "text.8157310c4b64": {
+    "en": "Select the maximum number of jobs that can run simultaneously.",
+    "zh": "选择可同时运行的最大作业数。"
+  },
+  "text.70594d932950": {
+    "en": "Timeout",
+    "zh": "超时"
+  },
+  "text.d04ca05da47c": {
+    "en": "Enter the maximum time allowed for jobs to complete, 0 to disable.",
+    "zh": "输入允许作业完成的最长时间，填 0 表示不限制。"
+  },
+  "text.ef21130cc848": {
+    "en": "Retries",
+    "zh": "重试次数"
+  },
+  "text.dc937b598926": {
+    "en": "None",
+    "zh": "无"
+  },
+  "text.b7a3c61a7a71": {
+    "en": "Select the number of retries to be attempted before an error is reported.",
+    "zh": "选择在报错前尝试的重试次数。"
+  },
+  "text.79fa87399ee7": {
+    "en": "Misc. Options",
+    "zh": "其他选项"
+  },
+  "text.92df40bd6716": {
+    "en": "Time Machine",
+    "zh": "时间机器"
+  },
+  "text.3ae1fbf04ecc": {
+    "en": "Optionally reset the internal clock for this event, to repeat past jobs, or jump over a queue.",
+    "zh": "可重置计划任务的内部时钟，以重跑历史实例或跳过队列。"
+  },
+  "text.ebda724e63c8": {
+    "en": "Queue Limit",
+    "zh": "队列上限"
+  },
+  "text.7f98d27d46e1": {
+    "en": "Set the maximum number of jobs that can be queued up for this event (or '0' for no limit).",
+    "zh": "设置此计划任务的队列容量，0 表示不限制。"
+  },
+  "text.fee822a775ca": {
+    "en": "Chain Reaction",
+    "zh": "连锁反应"
+  },
+  "text.313e7a0d5cec": {
+    "en": "Select events to run automatically after this event completes.",
+    "zh": "选择在此任务完成后自动运行的任务。"
+  },
+  "text.7d31b8331399": {
+    "en": "Notification",
+    "zh": "通知"
+  },
+  "text.e8d2d4fdfadc": {
+    "en": "Enter one or more e-mail addresses for notification (comma-separated), and optionally a web hook URL.",
+    "zh": "输入一个或多个通知邮箱，以逗号分隔；也可设置 Webhook 地址。"
+  },
+  "text.dffb64dc7001": {
+    "en": "Limits",
+    "zh": "限制"
+  },
+  "text.13a737b4fcb4": {
+    "en": "Optionally set CPU load, memory usage and log size limits for the event.",
+    "zh": "可选项，为任务设置 CPU 负载、内存用量和日志大小上限。"
+  },
+  "text.8a7525b1492f": {
+    "en": "Notes",
+    "zh": "备注"
+  },
+  "text.b3126a752c72": {
+    "en": "Optionally enter notes for the event, which will be included in all e-mail notifications.",
+    "zh": "可填写计划任务备注，备注会包含在所有通知邮件中。"
+  },
+  "text.2737a3b4f394": {
+    "en": "Crontab:",
+    "zh": "Crontab："
+  },
+  "text.208ff0209051": {
+    "en": "Enter your crontab date/time expression here.",
+    "zh": "在此输入 cron 日期和时间表达式。"
+  },
+  "text.2cff9baabf56": {
+    "en": "Import",
+    "zh": "导入"
+  },
+  "text.d47fcd8640fd": {
+    "en": "Please enter a crontab date/time expression.",
+    "zh": "请输入 cron 日期和时间表达式。"
+  },
+  "text.ba4d77ced0e8": {
+    "en": "Crontab date/time expression was imported successfully.",
+    "zh": "已成功导入 cron 日期和时间表达式。"
+  },
+  "text.0c3bfe60eae2": {
+    "en": "Category Title:",
+    "zh": "分类标题："
+  },
+  "text.b8c0b3740404": {
+    "en": "Enter a title for your category here.",
+    "zh": "在此输入分类标题。"
+  },
+  "text.9fd728c66c9a": {
+    "en": "Add",
+    "zh": "添加"
+  },
+  "text.1cf5f0303993": {
+    "en": "Please enter a title for the category.",
+    "zh": "请输入分类标题。"
+  },
+  "text.4510ef016a33": {
+    "en": "Adding category...",
+    "zh": "正在添加分类..."
+  },
+  "text.6b3f5625bf94": {
+    "en": "Category was added successfully.",
+    "zh": "分类添加成功。"
+  },
+  "text.6f84bd932796": {
+    "en": "Set Event Clock",
+    "zh": "设置任务时钟"
+  },
+  "text.873fef760e5d": {
+    "en": "Sunday",
+    "zh": "周日"
+  },
+  "text.6a00dfc1dc86": {
+    "en": "Monday",
+    "zh": "周一"
+  },
+  "text.7d8af1de1262": {
+    "en": "Tuesday",
+    "zh": "周二"
+  },
+  "text.c0a6cc829cd0": {
+    "en": "Wednesday",
+    "zh": "周三"
+  },
+  "text.fc2662062ffd": {
+    "en": "Thursday",
+    "zh": "周四"
+  },
+  "text.e21f3f372a46": {
+    "en": "Friday",
+    "zh": "周五"
+  },
+  "text.dbe35c7363c2": {
+    "en": "Saturday",
+    "zh": "周六"
+  },
+  "text.6d6a4d724b1f": {
+    "en": "Please enter a title for the event.",
+    "zh": "请输入任务标题。"
+  },
+  "text.2981ae898f99": {
+    "en": "Please select a Category for the event.",
+    "zh": "请为任务选择分类。"
+  },
+  "text.6d49f573b44a": {
+    "en": "Please enter a number of seconds to stagger by.",
+    "zh": "请输入错峰秒数。"
+  },
+  "text.0cb50a2f3925": {
+    "en": "Please select a Plugin for the event.",
+    "zh": "请为任务选择插件。"
+  },
+  "text.5864957a7046": {
+    "en": "Please enter an integer value for the event timeout.",
+    "zh": "请输入任务超时的整数值。"
+  },
+  "text.9252960f9006": {
+    "en": "Please enter a positive integer for the event timeout.",
+    "zh": "请输入任务超时的正整数。"
+  },
+  "text.b02b2ffc0304": {
+    "en": "Please enter an integer value for the event retry delay.",
+    "zh": "请输入任务重试延迟的整数值。"
+  },
+  "text.e17c5d56627a": {
+    "en": "Please enter a positive integer for the event retry delay.",
+    "zh": "请输入任务重试延迟的正整数。"
+  },
+  "text.50ceffb929ac": {
+    "en": "Please enter an integer value for the event queue max.",
+    "zh": "请输入任务队列上限的整数值。"
+  },
+  "text.e937d8d7967f": {
+    "en": "Please enter a positive integer for the event queue max.",
+    "zh": "请输入任务队列上限的正整数。"
+  },
+  "text.f5e94d3d8a79": {
+    "en": "Please enter a valid date/time for the new event time.",
+    "zh": "请输入有效的任务日期和时间。"
+  },
+  "text.cf99dee0c5b1": {
+    "en": "Please enter an integer value for the CPU limit.",
+    "zh": "CPU 上限请输入整数。"
+  },
+  "text.c99e254021c2": {
+    "en": "Please enter a positive integer for the CPU limit.",
+    "zh": "CPU 上限请输入正整数。"
+  },
+  "text.89ca0a5802bb": {
+    "en": "Please enter an integer value for the CPU sustain period.",
+    "zh": "CPU 持续周期请输入整数。"
+  },
+  "text.152591d49940": {
+    "en": "Please enter a positive integer for the CPU sustain period.",
+    "zh": "CPU 持续周期请输入正整数。"
+  },
+  "text.cdc93ae417e0": {
+    "en": "Please enter an integer value for the memory limit.",
+    "zh": "内存上限请输入整数。"
+  },
+  "text.39a3ab3afd32": {
+    "en": "Please enter a positive integer for the memory limit.",
+    "zh": "内存上限请输入正整数。"
+  },
+  "text.b6800df41883": {
+    "en": "Please enter an integer value for the memory sustain period.",
+    "zh": "内存持续周期请输入整数。"
+  },
+  "text.11b2c1c86db3": {
+    "en": "Please enter a positive integer for the memory sustain period.",
+    "zh": "内存持续周期请输入正整数。"
+  },
+  "text.29c36f211011": {
+    "en": "Please enter an integer value for the log size limit.",
+    "zh": "日志大小上限请输入整数。"
+  },
+  "text.79f68a491022": {
+    "en": "Please enter a positive integer for the log size limit.",
+    "zh": "日志大小上限请输入正整数。"
+  },
+  "text.92340695899b": {
+    "en": "Active",
+    "zh": "活跃"
+  },
+  "text.e392a3891c07": {
+    "en": "Suspended",
+    "zh": "已暂停"
+  },
+  "text.7f659ce26a8b": {
+    "en": "Add API Key...",
+    "zh": "新增 API 密钥..."
+  },
+  "text.431b43ab89e7": {
+    "en": "New API Key",
+    "zh": "新建 API 密钥"
+  },
+  "text.2c302f787a1e": {
+    "en": "Create Key",
+    "zh": "创建密钥"
+  },
+  "text.da0bf851309a": {
+    "en": "Editing API Key",
+    "zh": "编辑 API 密钥"
+  },
+  "text.aabc53ade719": {
+    "en": "Delete Key...",
+    "zh": "删除密钥..."
+  },
+  "text.6f076f9e25c2": {
+    "en": "Delete API Key",
+    "zh": "删除 API 密钥"
+  },
+  "text.cb6129cd2420": {
+    "en": "the API Key \"",
+    "zh": "API 密钥 \""
+  },
+  "text.9329273bb7d2": {
+    "en": "\"?  There is no way to undo this action.",
+    "zh": "\" 吗？此操作无法撤销。"
+  },
+  "text.44cc558c3f0d": {
+    "en": "Generate Random",
+    "zh": "随机生成"
+  },
+  "text.c08f17eb9e11": {
+    "en": "API Keys",
+    "zh": "API 密钥"
+  },
+  "text.315dfb75f23c": {
+    "en": "Activity Log",
+    "zh": "活动日志"
+  },
+  "text.b8b1d894c683": {
+    "en": "Categories",
+    "zh": "分类"
+  },
+  "text.9514b7ff4860": {
+    "en": "Plugins",
+    "zh": "插件"
+  },
+  "text.68d7beb6df59": {
+    "en": "Servers",
+    "zh": "服务器"
+  },
+  "text.6b0cc904d081": {
+    "en": "Users",
+    "zh": "用户"
+  },
+  "text.61c39342981e": {
+    "en": "App Title",
+    "zh": "应用标题"
+  },
+  "text.23189d55f697": {
+    "en": "API Key",
+    "zh": "API 密钥"
+  },
+  "text.d95082a2ee57": {
+    "en": "Author",
+    "zh": "作者"
+  },
+  "text.d70b9e24bca2": {
+    "en": "Created",
+    "zh": "创建时间"
+  },
+  "text.fa604df53c4e": {
+    "en": "Please enter an app title for the new API Key.",
+    "zh": "请输入新 API 密钥的应用名称。"
+  },
+  "text.7b18ab693094": {
+    "en": "Creating API Key...",
+    "zh": "正在创建 API 密钥..."
+  },
+  "text.12df9d2382b1": {
+    "en": "The new API Key was created successfully.",
+    "zh": "新 API 密钥创建成功。"
+  },
+  "text.10ebd19aa598": {
+    "en": "Editing API Key \"",
+    "zh": "编辑 API 密钥 \""
+  },
+  "text.c5499de878e4": {
+    "en": "Edit API Key",
+    "zh": "编辑 API 密钥"
+  },
+  "text.1148525dd062": {
+    "en": "Saving API Key...",
+    "zh": "正在保存 API 密钥..."
+  },
+  "text.e8384ee4c670": {
+    "en": "The API Key was saved successfully.",
+    "zh": "API 密钥保存成功。"
+  },
+  "text.c04159cdc5da": {
+    "en": "Deleting API Key...",
+    "zh": "正在删除 API 密钥..."
+  },
+  "text.796d510160c9": {
+    "en": "The API Key '",
+    "zh": "API 密钥 '"
+  },
+  "text.a09df038a45c": {
+    "en": "The API Key string is used to authenticate API calls.",
+    "zh": "API 密钥字符串用于验证 API 调用。"
+  },
+  "text.1ef8ada6f6e3": {
+    "en": "'Disabled' means that the API Key remains in the system, but it cannot be used for any API calls.",
+    "zh": "停用后，API 密钥仍保留在系统中，但无法用于调用任何接口。"
+  },
+  "text.359f62ef0a5e": {
+    "en": "Enter the title of the application that will be using the API Key.",
+    "zh": "输入使用该 API 密钥的应用名称。"
+  },
+  "text.114bcc464e46": {
+    "en": "App Description",
+    "zh": "应用描述"
+  },
+  "text.a6f6d7da9928": {
+    "en": "Optionally enter a more detailed description of the application.",
+    "zh": "可选，输入该应用的详细描述。"
+  },
+  "text.b841ae7ff53c": {
+    "en": "Privileges",
+    "zh": "权限"
+  },
+  "text.1a15fdc2bcce": {
+    "en": "Select which privileges the API Key should have.",
+    "zh": "选择该 API 密钥应具有的权限。"
+  },
+  "text.3ab90d69ed03": {
+    "en": "Please enter an API Key string, or generate a random one.",
+    "zh": "请输入 API 密钥字符串，或生成随机密钥。"
+  },
+  "text.34ca0e766088": {
+    "en": "Group",
+    "zh": "服务器组"
+  },
+  "text.4e1f49a9c8ae": {
+    "en": "Event",
+    "zh": "计划任务"
+  },
+  "text.b512d97e7cbf": {
+    "en": "User",
+    "zh": "用户"
+  },
+  "text.aef7de28d529": {
+    "en": "Server",
+    "zh": "服务器"
+  },
+  "text.ad617a0fdd57": {
+    "en": "Job",
+    "zh": "作业"
+  },
+  "text.d3a27d96cd07": {
+    "en": "Scheduler",
+    "zh": "调度器"
+  },
+  "text.e981ddae45d8": {
+    "en": "Warning",
+    "zh": "提示"
+  },
+  "text.db5cddc930c0": {
+    "en": "New category created:",
+    "zh": "创建分类："
+  },
+  "text.e81a668d7357": {
+    "en": "Category updated:",
+    "zh": "更新分类："
+  },
+  "text.da3bea40ea46": {
+    "en": "Category deleted:",
+    "zh": "删除分类："
+  },
+  "text.d1ec706a3065": {
+    "en": "New server group created:",
+    "zh": "创建服务器组："
+  },
+  "text.4956471ebf5e": {
+    "en": "Server group updated:",
+    "zh": "更新服务器组："
+  },
+  "text.2aa75f728b17": {
+    "en": "Server group deleted:",
+    "zh": "删除服务器组："
+  },
+  "text.9411ecd0f90b": {
+    "en": "New Plugin created:",
+    "zh": "创建插件："
+  },
+  "text.95820ea52357": {
+    "en": "Plugin updated:",
+    "zh": "更新插件："
+  },
+  "text.b5b0f2516549": {
+    "en": "Plugin deleted:",
+    "zh": "删除插件："
+  },
+  "text.f5a6dd20a8fa": {
+    "en": "New API Key created:",
+    "zh": "创建 API 密钥："
+  },
+  "text.479923ce05bf": {
+    "en": "(Key:",
+    "zh": "密钥："
+  },
+  "text.5fc183eca207": {
+    "en": "Edit Key",
+    "zh": "编辑密钥"
+  },
+  "text.f98f4af60290": {
+    "en": "API Key updated:",
+    "zh": "更新 API 密钥："
+  },
+  "text.e6f7fd046a85": {
+    "en": "API Key deleted:",
+    "zh": "删除 API 密钥："
+  },
+  "text.05b2713619af": {
+    "en": "New event added:",
+    "zh": "创建计划任务："
+  },
+  "text.7276cfd9cb95": {
+    "en": "Event updated:",
+    "zh": "更新计划任务："
+  },
+  "text.5f547eb4ac26": {
+    "en": "Event deleted:",
+    "zh": "删除计划任务："
+  },
+  "text.8aada093dd35": {
+    "en": "New user account created:",
+    "zh": "创建用户账户："
+  },
+  "text.e8a883531956": {
+    "en": "Edit User",
+    "zh": "编辑用户"
+  },
+  "text.c3a169f37084": {
+    "en": "User account updated:",
+    "zh": "更新用户账户："
+  },
+  "text.dd8baac694fb": {
+    "en": "User account deleted:",
+    "zh": "删除用户账户："
+  },
+  "text.2492730b6dad": {
+    "en": "User logged in:",
+    "zh": "用户登录："
+  },
+  "text.5faf88bae71e": {
+    "en": "manually",
+    "zh": "手动"
+  },
+  "text.ee36d807756d": {
+    "en": "added to cluster:",
+    "zh": "已加入集群："
+  },
+  "text.b4682d5b2372": {
+    "en": "removed from cluster:",
+    "zh": "已移出集群："
+  },
+  "text.1e9fff784fd3": {
+    "en": "Server has become primary:",
+    "zh": "服务器已成为主服务器："
+  },
+  "text.8f31bda03c84": {
+    "en": "Server restarted:",
+    "zh": "重启服务器："
+  },
+  "text.0abf55688589": {
+    "en": "Server shut down:",
+    "zh": "关闭服务器："
+  },
+  "text.5e1bb2cc934c": {
+    "en": "Lost connectivity to server:",
+    "zh": "服务器连接中断："
+  },
+  "text.c59ceed26a34": {
+    "en": "Reconnected to server:",
+    "zh": "服务器已重新连接："
+  },
+  "text.7fb785c98930": {
+    "en": ") manually started",
+    "zh": ") 手动启动"
+  },
+  "text.fef7df9c7b18": {
+    "en": ") on server",
+    "zh": ")，执行服务器"
+  },
+  "text.4dc44eea1545": {
+    "en": "completed successfully",
+    "zh": "已成功完成"
+  },
+  "text.6af4aa7b7e24": {
+    "en": "failed with error:",
+    "zh": "执行失败，错误："
+  },
+  "text.62b5b7b0410b": {
+    "en": ") manually deleted",
+    "zh": ") 手动删除"
+  },
+  "text.d994b2b0de79": {
+    "en": "Scheduler was",
+    "zh": "调度器已"
+  },
+  "text.018fbd2ca50d": {
+    "en": "Date/Time",
+    "zh": "日期和时间"
+  },
+  "text.baaddf70fb5d": {
+    "en": "Type",
+    "zh": "类型"
+  },
+  "text.526e0087cc3f": {
+    "en": "Description",
+    "zh": "描述"
+  },
+  "text.3c3de0c91c5f": {
+    "en": "IP Address",
+    "zh": "IP 地址"
+  },
+  "text.2078f36c7a24": {
+    "en": "Unknown Event",
+    "zh": "未知任务"
+  },
+  "text.c0dd11ef907c": {
+    "en": "Add Category...",
+    "zh": "新增分类..."
+  },
+  "text.0fcd154e81c7": {
+    "en": "Add Category",
+    "zh": "新增分类"
+  },
+  "text.a6a1c751f671": {
+    "en": "Editing Category",
+    "zh": "编辑分类"
+  },
+  "text.87176b46f60e": {
+    "en": "Delete Category...",
+    "zh": "删除分类..."
+  },
+  "text.d972c2085c49": {
+    "en": "using the disabled category",
+    "zh": "属于已停用的分类"
+  },
+  "text.88418cb10b8c": {
+    "en": "Delete Category",
+    "zh": "删除分类"
+  },
+  "text.5ba3abdddeb0": {
+    "en": "Are you sure you want to delete the category",
+    "zh": "确定删除分类"
+  },
+  "text.7a2e40ecf3f9": {
+    "en": "?  There is no way to undo this action.",
+    "zh": "?  此操作无法撤销。"
+  },
+  "text.926b82e005ff": {
+    "en": "Category Enabled",
+    "zh": "启用分类"
+  },
+  "text.f4109ba97285": {
+    "en": "Default Notification Options",
+    "zh": "默认通知设置"
+  },
+  "text.0e3a21fd12c6": {
+    "en": "Default Email on Success:",
+    "zh": "默认成功通知邮箱："
+  },
+  "text.a0481915ec81": {
+    "en": "Default Email on Failure:",
+    "zh": "默认失败通知邮箱："
+  },
+  "text.89f5499e7ef2": {
+    "en": "Default Web Hook URL:",
+    "zh": "默认 Webhook 地址："
+  },
+  "text.5c622c84a834": {
+    "en": "Optionally enter default e-mail addresses for notification, and/or a web hook URL.",
+    "zh": "可设置默认通知邮箱和 Webhook 地址。"
+  },
+  "text.637f2882ea29": {
+    "en": "Note that events can override any of these notification settings.",
+    "zh": "计划任务可以覆盖这些通知设置。"
+  },
+  "text.2ef8c2d878ca": {
+    "en": "Default Resource Limits",
+    "zh": "默认资源限制"
+  },
+  "text.8f25fda920c3": {
+    "en": "Default CPU Limit:",
+    "zh": "默认 CPU 限制："
+  },
+  "text.f535f856135a": {
+    "en": "Default Memory Limit:",
+    "zh": "默认内存限制："
+  },
+  "text.4b3db55fe21f": {
+    "en": "Default Log Size Limit:",
+    "zh": "默认日志大小限制："
+  },
+  "text.20fbc45adfdd": {
+    "en": "Optionally set default CPU load, memory usage and log size limits for the category.",
+    "zh": "可为此分类设置默认 CPU、内存和日志大小限制。"
+  },
+  "text.d4a773a4e44a": {
+    "en": "Note that events can override any of these limits.",
+    "zh": "计划任务可以覆盖这些资源限制。"
+  },
+  "text.7e8cd2056da7": {
+    "en": "Title",
+    "zh": "标题"
+  },
+  "text.fd9455fbf980": {
+    "en": "Assigned Events",
+    "zh": "分配的任务"
+  },
+  "text.34fe1eb88567": {
+    "en": "Max Concurrent",
+    "zh": "最大并发"
+  },
+  "text.46ff0bdb2e47": {
+    "en": "Event Categories",
+    "zh": "任务分类"
+  },
+  "text.3a0878e4fa55": {
+    "en": "New Category",
+    "zh": "新建分类"
+  },
+  "text.3d7dc451e2df": {
+    "en": "Creating category...",
+    "zh": "正在创建分类..."
+  },
+  "text.e5bb8f91a9c9": {
+    "en": "The new category was created successfully.",
+    "zh": "新分类已成功创建。"
+  },
+  "text.1bc318b15b42": {
+    "en": "Editing Category \"",
+    "zh": "编辑分类 \""
+  },
+  "text.0d93b77a17dc": {
+    "en": "Edit Category",
+    "zh": "编辑分类"
+  },
+  "text.c96d789a7d6a": {
+    "en": "Saving category...",
+    "zh": "正在保存分类..."
+  },
+  "text.2f954835fca3": {
+    "en": "The category was saved successfully.",
+    "zh": "分类已成功保存。"
+  },
+  "text.16a22909a49b": {
+    "en": "Sorry, you cannot delete a category that has events assigned to it.",
+    "zh": "抱歉，无法删除已分配任务的分类。"
+  },
+  "text.15cd5baa8723": {
+    "en": "Deleting Category...",
+    "zh": "正在删除分类..."
+  },
+  "text.fbe7adc12e02": {
+    "en": "The category '",
+    "zh": "分类 '"
+  },
+  "text.a25b2147268a": {
+    "en": "Category ID",
+    "zh": "分类 ID"
+  },
+  "text.29d599f88af1": {
+    "en": "The internal Category ID used for API calls.  This cannot be changed.",
+    "zh": "用于 API 调用的内部分类 ID。此值不可更改。"
+  },
+  "text.db3971eb7e53": {
+    "en": "Enter a title for the category, short and sweet.",
+    "zh": "请输入分类标题，简短明了。"
+  },
+  "text.6474364d241b": {
+    "en": "Select whether events in this category should be enabled or disabled in the schedule.",
+    "zh": "选择此分类下的计划任务是否允许调度。"
+  },
+  "text.0cf2814604b4": {
+    "en": "Description:",
+    "zh": "描述："
+  },
+  "text.14086c2bb745": {
+    "en": "Optionally enter a description for the category.",
+    "zh": "可选，请输入该分类的描述。"
+  },
+  "text.37e7ef9f8a8e": {
+    "en": "Max Concurrent:",
+    "zh": "最大并发："
+  },
+  "text.366c2707df5c": {
+    "en": "No Limit",
+    "zh": "无限制"
+  },
+  "text.d679162ce9c5": {
+    "en": "Select the maximum number of jobs allowed to run concurrently in this category.",
+    "zh": "选择允许在此分类中同时运行的最大作业数。"
+  },
+  "text.48aae41545ce": {
+    "en": "Highlight Color",
+    "zh": "高亮颜色"
+  },
+  "text.2e477787809d": {
+    "en": "Optionally select a highlight color for the category, which will show on the schedule.",
+    "zh": "可选择分类的高亮颜色，颜色将显示在计划任务列表中。"
+  },
+  "text.0b8e9069f82d": {
+    "en": "Add New Plugin...",
+    "zh": "新增插件..."
+  },
+  "text.1631aa103953": {
+    "en": "Delete Plugin",
+    "zh": "删除插件"
+  },
+  "text.d57ccd38e485": {
+    "en": "Are you sure you want to delete the plugin",
+    "zh": "确定删除插件"
+  },
+  "text.fb4d21f46142": {
+    "en": "Add New Plugin",
+    "zh": "添加新插件"
+  },
+  "text.42ac880984a3": {
+    "en": "Create Plugin",
+    "zh": "创建插件"
+  },
+  "text.95be14cd739a": {
+    "en": "Editing Plugin",
+    "zh": "编辑插件"
+  },
+  "text.d8a3b81f8911": {
+    "en": "Delete Plugin...",
+    "zh": "删除插件..."
+  },
+  "text.774a3bd7eb77": {
+    "en": "Copy Plugin...",
+    "zh": "复制插件..."
+  },
+  "text.412e70fb3c32": {
+    "en": "using the disabled plugin",
+    "zh": "使用已停用的插件"
+  },
+  "text.1a58784b47ce": {
+    "en": "Plugin Enabled",
+    "zh": "启用插件"
+  },
+  "text.75c95b9fdbcb": {
+    "en": "Enter the filesystem path to your executable, including any command-line arguments.",
+    "zh": "输入可执行文件的路径和命令行参数。"
+  },
+  "text.cd4cb79c74ec": {
+    "en": "Do not include any pipes or redirects -- for those, please use the",
+    "zh": "请勿包含管道或重定向，需要这些功能时请使用"
+  },
+  "text.2fdec6ea6a37": {
+    "en": "Shell Plugin",
+    "zh": "Shell 插件"
+  },
+  "text.40a62a2f8ac3": {
+    "en": "Parameters are passed to your Plugin via JSON, and as environment variables.",
+    "zh": "参数通过 JSON 和环境变量传给插件。"
+  },
+  "text.9197f6ba4327": {
+    "en": "For example, you can use this to customize the PATH variable, if your Plugin requires it.",
+    "zh": "例如，插件需要自定义 PATH 时，可在此设置。"
+  },
+  "text.dfa2817fb222": {
+    "en": "Advanced Options",
+    "zh": "高级设置"
+  },
+  "text.83d4c34b11b8": {
+    "en": "Working Directory (CWD):",
+    "zh": "工作目录 CWD："
+  },
+  "text.0e2415bf6b6d": {
+    "en": "Run as User (UID):",
+    "zh": "运行用户 UID："
+  },
+  "text.3c03b0edcff2": {
+    "en": "Run as Group (GID):",
+    "zh": "运行用户组 GID："
+  },
+  "text.2b4545780ce3": {
+    "en": "Optionally enter a working directory path, and/or a custom UID/GID for the Plugin.",
+    "zh": "可指定插件的工作目录和运行用户、用户组。"
+  },
+  "text.1a485030d8b1": {
+    "en": "The UID/GID may be either numerical or strings ('root', 'wheel', etc.).",
+    "zh": "UID 和 GID 可以是数值，也可以是 root、wheel 等名称。"
+  },
+  "text.f3abe585a795": {
+    "en": "(n/a)",
+    "zh": "暂无"
+  },
+  "text.b3f672247a3a": {
+    "en": "Add Parameter...",
+    "zh": "新增参数..."
+  },
+  "text.d4b46a1f5d9d": {
+    "en": "Control&nbsp;Type:",
+    "zh": "控件类型："
+  },
+  "text.8837c729f865": {
+    "en": "Edit Parameter",
+    "zh": "编辑参数"
+  },
+  "text.1108c09cbfe2": {
+    "en": "Add Parameter",
+    "zh": "添加参数"
+  },
+  "text.bae9f7252798": {
+    "en": "Text Field",
+    "zh": "文本字段"
+  },
+  "text.dc7ec1ed1293": {
+    "en": "Text Box",
+    "zh": "文本框"
+  },
+  "text.d103a1380b8c": {
+    "en": "Checkbox",
+    "zh": "复选框"
+  },
+  "text.7e6fefff0f0a": {
+    "en": "Hidden",
+    "zh": "隐藏"
+  },
+  "text.99af6606ff9d": {
+    "en": "Menu",
+    "zh": "菜单"
+  },
+  "text.739c4897c863": {
+    "en": "Plugin Name",
+    "zh": "插件名称"
+  },
+  "text.e8ce5dcaf408": {
+    "en": "Modified",
+    "zh": "已修改"
+  },
+  "text.1e32f5668a03": {
+    "en": "Sorry, you cannot delete a plugin that has events assigned to it.",
+    "zh": "抱歉,无法删除已分配任务的插件。"
+  },
+  "text.efc444a4d8b6": {
+    "en": "Deleting Plugin...",
+    "zh": "正在删除插件..."
+  },
+  "text.f4f7cb5fd9a2": {
+    "en": "The Plugin '",
+    "zh": "插件 '"
+  },
+  "text.7461fc826844": {
+    "en": "Creating plugin...",
+    "zh": "正在创建插件..."
+  },
+  "text.811fbf9b7d4e": {
+    "en": "The new plugin was created successfully.",
+    "zh": "新插件创建成功。"
+  },
+  "text.96f62db1f9d1": {
+    "en": "Could not locate Plugin with ID:",
+    "zh": "找不到指定 ID 的插件："
+  },
+  "text.ff55287cc45a": {
+    "en": "Editing Plugin \"",
+    "zh": "编辑插件 \""
+  },
+  "text.b749b8c7c347": {
+    "en": "Edit Plugin",
+    "zh": "编辑插件"
+  },
+  "text.1d52659c9c15": {
+    "en": "Saving plugin...",
+    "zh": "正在保存插件..."
+  },
+  "text.eb619bdb6b6c": {
+    "en": "The plugin was saved successfully.",
+    "zh": "插件保存成功。"
+  },
+  "text.32a723fa23c1": {
+    "en": "Plugin ID",
+    "zh": "插件 ID"
+  },
+  "text.f225bbb348cf": {
+    "en": "The internal Plugin ID used for API calls.  This cannot be changed.",
+    "zh": "供 API 调用使用的内部插件 ID，不可修改。"
+  },
+  "text.9a08deca64ef": {
+    "en": "Enter a name for the Plugin.  Ideally it should be somewhat short, and Title Case.",
+    "zh": "输入简短、易于识别的插件名称。"
+  },
+  "text.acfc1e7a66d0": {
+    "en": "Select whether events using this Plugin should be enabled or disabled in the schedule.",
+    "zh": "选择使用此插件的计划任务是否允许调度。"
+  },
+  "text.f79db2cced52": {
+    "en": "Executable:",
+    "zh": "可执行文件:"
+  },
+  "text.03acaf78dc88": {
+    "en": "Parameters:",
+    "zh": "参数:"
+  },
+  "text.9f088dbebd6c": {
+    "en": "Advanced",
+    "zh": "高级"
+  },
+  "text.4e831e4b00e5": {
+    "en": "Param ID",
+    "zh": "参数 ID"
+  },
+  "text.0e66373f45dc": {
+    "en": "Label",
+    "zh": "标签"
+  },
+  "text.7e67190c785c": {
+    "en": "Control Type",
+    "zh": "控件类型"
+  },
+  "text.950b4fd4fde3": {
+    "en": "No params found.",
+    "zh": "没有找到参数。"
+  },
+  "text.94c12edab7de": {
+    "en": "Parameter ID:",
+    "zh": "参数 ID:"
+  },
+  "text.0f7af1e10c33": {
+    "en": "Enter an ID for the parameter, which will be the JSON key.",
+    "zh": "输入参数 ID，将作为 JSON 键。"
+  },
+  "text.6401be67248d": {
+    "en": "Label:",
+    "zh": "标签:"
+  },
+  "text.2d0f4b132415": {
+    "en": "Enter a label, which will be displayed next to the control.",
+    "zh": "输入标签，显示在控件旁边。"
+  },
+  "text.565339bc4d33": {
+    "en": "OK",
+    "zh": "确定"
+  },
+  "text.6834c4992887": {
+    "en": "That parameter ID is already taken.  Please enter a unique value.",
+    "zh": "该参数 ID 已被占用，请输入唯一的值。"
+  },
+  "text.c987f668d963": {
+    "en": "Size:",
+    "zh": "大小:"
+  },
+  "text.8512b1354ba2": {
+    "en": "Enter the size of the text field, in characters.",
+    "zh": "输入文本字段的大小，以字符计。"
+  },
+  "text.f7c985426719": {
+    "en": "Default Value:",
+    "zh": "默认值:"
+  },
+  "text.f29243671c6c": {
+    "en": "Enter the default value for the text field.",
+    "zh": "输入文本字段的默认值。"
+  },
+  "text.228d227a1a12": {
+    "en": "Rows:",
+    "zh": "行数:"
+  },
+  "text.8f619b75b07a": {
+    "en": "Enter the number of visible rows to allocate for the text box.",
+    "zh": "输入文本框分配的可显示行数。"
+  },
+  "text.d949ab9ab78c": {
+    "en": "Default Text:",
+    "zh": "默认文本:"
+  },
+  "text.0c385937e69d": {
+    "en": "Optionally enter default text for the text box.",
+    "zh": "可选，输入文本框的默认文本。"
+  },
+  "text.8c7811713260": {
+    "en": "Default State:",
+    "zh": "默认状态:"
+  },
+  "text.33fddd0ed6c0": {
+    "en": "Unchecked",
+    "zh": "未勾选"
+  },
+  "text.0efd92a33590": {
+    "en": "Checked",
+    "zh": "已勾选"
+  },
+  "text.d70172baf7f9": {
+    "en": "Select whether the checkbox should be initially checked or unchecked.",
+    "zh": "选择复选框初始为选中还是未选中。"
+  },
+  "text.224a3369a5c9": {
+    "en": "Value:",
+    "zh": "值:"
+  },
+  "text.e6b68a9ce2b1": {
+    "en": "Enter the value for the hidden field.",
+    "zh": "输入隐藏字段的值。"
+  },
+  "text.4ceb5dabce1a": {
+    "en": "Menu Items:",
+    "zh": "菜单项:"
+  },
+  "text.86991cea74cc": {
+    "en": "Enter a comma-separated list of items for the menu.",
+    "zh": "输入逗号分隔的菜单项列表。"
+  },
+  "text.3c2e58811165": {
+    "en": "Selected Item:",
+    "zh": "默认选中项:"
+  },
+  "text.912df727f1f7": {
+    "en": "Optionally enter an item to be selected by default.",
+    "zh": "可选，输入默认选中的项。"
+  },
+  "text.40fef7b51231": {
+    "en": "Please enter an ID for the plugin parameter.",
+    "zh": "请输入插件参数的 ID。"
+  },
+  "text.61fcfa763c48": {
+    "en": "The parameter ID needs to be alphanumeric.",
+    "zh": "参数 ID 必须为字母数字组合。"
+  },
+  "text.8a1c50d3557f": {
+    "en": "Please enter a label for the plugin parameter.",
+    "zh": "请输入插件参数的标签。"
+  },
+  "text.0a4068849867": {
+    "en": "Please enter a size for the text field.",
+    "zh": "请输入文本字段的尺寸。"
+  },
+  "text.bc32e06eec2d": {
+    "en": "The text field size needs to be between 1 and 40 characters.",
+    "zh": "文本字段大小须在 1 到 40 个字符之间。"
+  },
+  "text.19205f6ba894": {
+    "en": "Please enter a number of rows for the text box.",
+    "zh": "请输入文本框的行数。"
+  },
+  "text.3212e066d638": {
+    "en": "The text box rows needs to be between 1 and 50.",
+    "zh": "文本框行数须在 1 到 50 之间。"
+  },
+  "text.d02eba280016": {
+    "en": "Please enter a comma-separated list of items for the menu.",
+    "zh": "请输入逗号分隔的菜单项列表。"
+  },
+  "text.d8283e5c1525": {
+    "en": "The default value you entered was not found in the list of menu items.",
+    "zh": "输入的默认值不在菜单项列表中。"
+  },
+  "text.6a026e02166b": {
+    "en": "Please enter a title for the Plugin.",
+    "zh": "请输入插件名称。"
+  },
+  "text.26572bcc4f67": {
+    "en": "Please enter a filesystem path to the executable command for the Plugin.",
+    "zh": "请输入插件可执行命令的文件系统路径。"
+  },
+  "text.a3f27defcce0": {
+    "en": "You must not include any newlines (EOLs) in your command.  Please consider using the built-in Shell Plugin.",
+    "zh": "命令不能包含换行。需要多行脚本时，请使用内置 Shell 插件。"
+  },
+  "text.da8993ec0654": {
+    "en": "Add Server",
+    "zh": "添加服务器"
+  },
+  "text.6b983a81e5e8": {
+    "en": "Restart",
+    "zh": "重启"
+  },
+  "text.ed677a02220d": {
+    "en": "Shutdown",
+    "zh": "关机"
+  },
+  "text.c3812fc4acb8": {
+    "en": "Remove",
+    "zh": "移除"
+  },
+  "text.efe10c80ec8a": {
+    "en": "Primary",
+    "zh": "主服务器"
+  },
+  "text.838557924a5c": {
+    "en": "Backup",
+    "zh": "备用服务器"
+  },
+  "text.a67b04cd5c49": {
+    "en": "Worker",
+    "zh": "执行服务器"
+  },
+  "text.03edc445284b": {
+    "en": "Add Server...",
+    "zh": "新增服务器..."
+  },
+  "text.b5ad144b3d2b": {
+    "en": "Primary Eligible",
+    "zh": "可作为主服务器"
+  },
+  "text.6194386d3fa3": {
+    "en": "Add Group...",
+    "zh": "新增服务器组..."
+  },
+  "text.4e3b128e5d0d": {
+    "en": "Remove Server",
+    "zh": "移除服务器"
+  },
+  "text.971ea7e23308": {
+    "en": "Are you sure you want to remove the server",
+    "zh": "确定移除服务器"
+  },
+  "text.7fb5027df53e": {
+    "en": "Edit Server Group",
+    "zh": "编辑服务器组"
+  },
+  "text.8cd70ed32a1c": {
+    "en": "Add Server Group",
+    "zh": "添加服务器组"
+  },
+  "text.666dbabf32af": {
+    "en": "Delete Server Group",
+    "zh": "删除服务器组"
+  },
+  "text.4b63c686e0d0": {
+    "en": "Are you sure you want to delete the server group",
+    "zh": "确定删除服务器组"
+  },
+  "text.2c9db98502c6": {
+    "en": "Restart Server",
+    "zh": "重启服务器"
+  },
+  "text.8e73fea8a409": {
+    "en": "Are you sure you want to restart the server",
+    "zh": "确定重启服务器"
+  },
+  "text.602891e70f1d": {
+    "en": "?  All server jobs will be aborted.",
+    "zh": "吗？该服务器上的所有执行实例都会被中止。"
+  },
+  "text.fe55921f660a": {
+    "en": "Shutdown Server",
+    "zh": "关闭服务器"
+  },
+  "text.fd273a3bca54": {
+    "en": "Are you sure you want to shutdown the server",
+    "zh": "确定关闭服务器"
+  },
+  "text.39bbb719fa2b": {
+    "en": "Groups",
+    "zh": "组"
+  },
+  "text.d63ab4711473": {
+    "en": "Uptime",
+    "zh": "运行时间"
+  },
+  "text.db9a4c7d4c19": {
+    "en": "CPU",
+    "zh": "CPU"
+  },
+  "text.a560e7eaa00b": {
+    "en": "Mem",
+    "zh": "内存"
+  },
+  "text.4f714f0a71a0": {
+    "en": "Server Cluster",
+    "zh": "服务器集群"
+  },
+  "text.492f614a44d9": {
+    "en": "Hostname Match",
+    "zh": "主机名匹配"
+  },
+  "text.4f3a9bd00397": {
+    "en": "Class",
+    "zh": "类"
+  },
+  "text.e9e019185d83": {
+    "en": "Server Groups",
+    "zh": "服务器组"
+  },
+  "text.49e124b01bf3": {
+    "en": "Adding server...",
+    "zh": "正在添加服务器..."
+  },
+  "text.46076372e8ed": {
+    "en": "Server was added successfully.",
+    "zh": "服务器添加成功。"
+  },
+  "text.7d228d20da04": {
+    "en": "Hostname or IP:",
+    "zh": "主机名或 IP:"
+  },
+  "text.f50cbe414cd1": {
+    "en": "Enter the hostname or IP of the server you want to add.",
+    "zh": "输入要添加的服务器的主机名或 IP。"
+  },
+  "text.9143e470ce3e": {
+    "en": "Please enter a server hostname or IP address.",
+    "zh": "请输入服务器主机名或 IP 地址。"
+  },
+  "text.2faf07877c1f": {
+    "en": "Please enter a valid server hostname or IP address.",
+    "zh": "请输入有效的服务器主机名或 IP 地址。"
+  },
+  "text.c8a1cd985627": {
+    "en": "That server is already in the cluster.",
+    "zh": "该服务器已在集群中。"
+  },
+  "text.66b146d1b3f0": {
+    "en": "Sorry, you cannot remove a server that has active jobs running on it.",
+    "zh": "抱歉,无法移除其上仍有作业运行的服务器。"
+  },
+  "text.f8d64bd0eb99": {
+    "en": "Removing server...",
+    "zh": "正在移除服务器..."
+  },
+  "text.ff6fa805f757": {
+    "en": "Server was removed successfully.",
+    "zh": "服务器已成功移除。"
+  },
+  "text.625caf5ed130": {
+    "en": "Group ID",
+    "zh": "组 ID"
+  },
+  "text.bba7e48edf83": {
+    "en": "The internal Group ID used for API calls.  This cannot be changed.",
+    "zh": "用于 API 调用的内部组 ID,不可更改。"
+  },
+  "text.bbdaccb25954": {
+    "en": "Group Title:",
+    "zh": "组标题:"
+  },
+  "text.74d18acb4235": {
+    "en": "Enter a title for the server group, short and sweet.",
+    "zh": "为服务器组输入一个简短好记的标题。"
+  },
+  "text.36d4696f0bf7": {
+    "en": "Hostname Match:",
+    "zh": "主机名匹配:"
+  },
+  "text.5376c6813cd4": {
+    "en": "Enter a regular expression to auto-assign servers to this group by their hostnames, e.g. \"^mtx\\d+\\.\".",
+    "zh": "输入用于匹配主机名的正则表达式，匹配的服务器将自动归入此组。例如：\"^mtx\\d+\\.\"。"
+  },
+  "text.539df32af829": {
+    "en": "Server Class:",
+    "zh": "服务器类别:"
+  },
+  "text.5a18d40a50b5": {
+    "en": "Worker Only",
+    "zh": "仅 Worker"
+  },
+  "text.8dd20f70bef7": {
+    "en": "Select whether servers in the group are eligible to become the primary server, or run as workers only.",
+    "zh": "选择组内服务器是否允许成为主服务器，或仅用于执行任务。"
+  },
+  "text.23d7ed72b070": {
+    "en": "Add Group",
+    "zh": "添加组"
+  },
+  "text.5c61df72ebbb": {
+    "en": "Please enter a title for the server group.",
+    "zh": "请输入服务器组的标题。"
+  },
+  "text.a7a8c35423fc": {
+    "en": "Please enter a regular expression for the server group.",
+    "zh": "请输入服务器组的正则表达式。"
+  },
+  "text.141e387d9f6d": {
+    "en": "Invalid regular expression:",
+    "zh": "正则表达式无效："
+  },
+  "text.5d3296996951": {
+    "en": "Saving group...",
+    "zh": "正在保存组..."
+  },
+  "text.fc39ee15c50b": {
+    "en": "Adding group...",
+    "zh": "正在添加组..."
+  },
+  "text.ad0b31fefd9a": {
+    "en": "Server group was",
+    "zh": "服务器组已"
+  },
+  "text.d81c55f49c5b": {
+    "en": "saved",
+    "zh": "保存"
+  },
+  "text.279b8a60f444": {
+    "en": "added",
+    "zh": "添加"
+  },
+  "text.288255322e31": {
+    "en": "successfully.",
+    "zh": "成功。"
+  },
+  "text.5c479e07d4c5": {
+    "en": "Sorry, you cannot delete the last Primary Eligible server group.",
+    "zh": "抱歉,无法删除最后一个可作为主服务器的服务器组。"
+  },
+  "text.52591cdf6a6d": {
+    "en": "Sorry, you cannot delete a group that has events assigned to it.",
+    "zh": "抱歉,无法删除已分配任务的组。"
+  },
+  "text.e075d6ea255c": {
+    "en": "Deleting group...",
+    "zh": "正在删除组..."
+  },
+  "text.2fb4cc1a305a": {
+    "en": "Server group was deleted successfully.",
+    "zh": "服务器组已成功删除。"
+  },
+  "text.9309058de967": {
+    "en": "Restarting server...",
+    "zh": "正在重启服务器..."
+  },
+  "text.a1e5c48a9bb5": {
+    "en": "Server is being restarted in the background.",
+    "zh": "服务器正在后台重启。"
+  },
+  "text.a2f88b956022": {
+    "en": "Shutting down server...",
+    "zh": "正在关闭服务器..."
+  },
+  "text.2253cb7357d4": {
+    "en": "Server is being shut down in the background.",
+    "zh": "服务器正在后台关闭。"
+  },
+  "text.44a4261e9152": {
+    "en": "Find username...",
+    "zh": "查找用户名..."
+  },
+  "text.ef6691545d2c": {
+    "en": "Standard",
+    "zh": "普通用户"
+  },
+  "text.fa9c972bf4fd": {
+    "en": "Add User...",
+    "zh": "新增用户..."
+  },
+  "text.8512bf96fff6": {
+    "en": "Add New User",
+    "zh": "添加新用户"
+  },
+  "text.a476a4e64d55": {
+    "en": "Send Welcome Email",
+    "zh": "发送欢迎邮件"
+  },
+  "text.5cab2d8b34d4": {
+    "en": "Randomize...",
+    "zh": "随机生成..."
+  },
+  "text.80532ec0b622": {
+    "en": "Create User",
+    "zh": "创建用户"
+  },
+  "text.4c4c829cf046": {
+    "en": "Editing User",
+    "zh": "编辑用户"
+  },
+  "text.2be368ea4baf": {
+    "en": "the user account \"",
+    "zh": "用户账户 \""
+  },
+  "text.8ada4b5dd729": {
+    "en": "\"?  There is no way to undo this action, and no way to recover the data.",
+    "zh": "\" 吗？此操作无法撤销，数据也无法恢复。"
+  },
+  "text.c031bf992e17": {
+    "en": "Delete Account",
+    "zh": "删除账户"
+  },
+  "text.b08c0af3db5b": {
+    "en": "User List",
+    "zh": "用户列表"
+  },
+  "text.067b2320ae58": {
+    "en": "User Accounts",
+    "zh": "用户账户"
+  },
+  "text.ad0a0b45d309": {
+    "en": "User not found:",
+    "zh": "找不到用户："
+  },
+  "text.3fd9d10cde62": {
+    "en": "Users are managed by an external system, so you cannot add users from here.",
+    "zh": "用户由外部系统管理,无法从此处添加用户。"
+  },
+  "text.f4e2b7734cb9": {
+    "en": "Notify",
+    "zh": "通知"
+  },
+  "text.8e8a64956023": {
+    "en": "Select notification options for the new user.",
+    "zh": "为新用户选择通知选项。"
+  },
+  "text.be04db368228": {
+    "en": "Please enter a username for the new account.",
+    "zh": "请输入新账户的用户名。"
+  },
+  "text.252da34e1839": {
+    "en": "Please make sure the username contains only alphanumerics, periods and dashes.",
+    "zh": "请确保用户名仅包含字母、数字、句点和连字符。"
+  },
+  "text.eb2face1856b": {
+    "en": "Please enter an e-mail address where the user can be reached.",
+    "zh": "请输入可以联系到该用户的电子邮箱地址。"
+  },
+  "text.bf6d7436bcfc": {
+    "en": "Please enter the user's first and last names.",
+    "zh": "请输入用户的姓和名。"
+  },
+  "text.4ac971eaed4b": {
+    "en": "Please enter a secure password to protect the account.",
+    "zh": "请输入安全密码以保护账户。"
+  },
+  "text.9085bd064260": {
+    "en": "Creating user...",
+    "zh": "正在创建用户..."
+  },
+  "text.81b1cfea12d2": {
+    "en": "The new user account was created successfully.",
+    "zh": "新用户账户已成功创建。"
+  },
+  "text.c479b1eb0594": {
+    "en": "Editing User \"",
+    "zh": "编辑用户 \""
+  },
+  "text.7f886e96b840": {
+    "en": "Users are managed by an external system, so making changes here may have little effect.",
+    "zh": "用户由外部系统管理，此处的修改可能不会生效。"
+  },
+  "text.fda124a37eae": {
+    "en": "Saving user account...",
+    "zh": "正在保存用户账户..."
+  },
+  "text.80274178f8ee": {
+    "en": "The user was saved successfully.",
+    "zh": "用户已成功保存。"
+  },
+  "text.5d623730adba": {
+    "en": "Are you sure you want to delete the user account \"",
+    "zh": "确定删除用户账户 \""
+  },
+  "text.55e04e7b98a6": {
+    "en": "\"?  Users are managed by an external system, so this will have little effect here.",
+    "zh": "\" 吗？用户由外部系统管理，此处的删除可能不会生效。"
+  },
+  "text.23b02d414400": {
+    "en": "The user account '",
+    "zh": "用户账户 '"
+  },
+  "text.aebdf1cf5e70": {
+    "en": "Enter the username which identifies this account.  Once entered, it cannot be changed.",
+    "zh": "输入用于标识此账户的用户名，创建后无法修改。"
+  },
+  "text.dafb01abaf3d": {
+    "en": "Account Status",
+    "zh": "账户状态"
+  },
+  "text.044e177b2a9b": {
+    "en": "'Suspended' means that the account remains in the system, but the user cannot log in.",
+    "zh": "停用后，账户仍保留在系统中，但用户无法登录。"
+  },
+  "text.dfed146cc948": {
+    "en": "User's first and last name.  They will not be shared with anyone outside the server.",
+    "zh": "用户姓名，不会共享给服务器之外的人员。"
+  },
+  "text.9c6e9963f255": {
+    "en": "This can be used to recover the password if the user forgets.  It will not be shared with anyone outside the server.",
+    "zh": "用于找回密码，不会共享给服务器之外的人员。"
+  },
+  "text.a949f4623074": {
+    "en": "Change Password",
+    "zh": "修改密码"
+  },
+  "text.e7cf3ef4f17c": {
+    "en": "Password",
+    "zh": "密码"
+  },
+  "text.b1ec3558e944": {
+    "en": "Optionally enter a new password here to reset it.  Please make it secure.",
+    "zh": "可在此输入新密码以重置,请确保密码足够安全。"
+  },
+  "text.c9f6d01d35e7": {
+    "en": "Enter a password for the account.  Please make it secure.",
+    "zh": "输入账户密码,请确保密码足够安全。"
+  },
+  "text.a959c5a915d4": {
+    "en": "Limit to Categories",
+    "zh": "限于分类"
+  },
+  "text.648eea9f1413": {
+    "en": "Limit to Server Groups",
+    "zh": "限于服务器组"
+  },
+  "text.d8153b47de96": {
+    "en": "Select which privileges the user account should have. Administrators have all privileges.",
+    "zh": "选择此账户的权限。管理员拥有全部权限。"
+  },
+  "text.27e6854b22ca": {
+    "en": "Please select at least one category privilege.",
+    "zh": "请至少选择一个分类权限。"
+  },
+  "text.824c5f5144be": {
+    "en": "Please select at least one server group privilege.",
+    "zh": "请至少选择一个服务器组权限。"
+  },
+  "text.60acc53f13a5": {
+    "en": "Dark",
+    "zh": "深色"
+  },
+  "text.dbcd5e7bb7a0": {
+    "en": "Light",
+    "zh": "浅色"
+  },
+  "text.974a45998791": {
+    "en": "Network Error:",
+    "zh": "网络错误："
+  },
+  "text.8af9987aebfb": {
+    "en": "Prev Page",
+    "zh": "上一页"
+  },
+  "text.ac3983ec8d11": {
+    "en": "Next Page &raquo;",
+    "zh": "下一页"
+  },
+  "text.bcc649cfdb8c": {
+    "en": "found",
+    "zh": "条记录"
+  },
+  "text.0a30a815d67d": {
+    "en": "Page",
+    "zh": "页"
+  },
+  "text.28391d3bc64e": {
+    "en": "of",
+    "zh": "共"
+  },
+  "text.d6e19ce6ca28": {
+    "en": "Page 1 of 1",
+    "zh": "第 1 页，共 1 页"
+  },
+  "text.1ea442a134b2": {
+    "en": "No",
+    "zh": "没有"
+  },
+  "text.ddbb38711e20": {
+    "en": "found.",
+    "zh": "记录。"
+  },
+  "text.ab0171ca0494": {
+    "en": "Idle",
+    "zh": "空闲"
+  },
+  "text.94bf105769a5": {
+    "en": "&raquo; Remove me",
+    "zh": "移除我"
+  },
+  "text.8a0e4aba6a31": {
+    "en": "&laquo; Add me",
+    "zh": "添加我"
+  },
+  "text.1dec38733b5f": {
+    "en": "Select Date/Time",
+    "zh": "选择日期和时间"
+  },
+  "text.2a78025de6aa": {
+    "en": "Select",
+    "zh": "选择"
+  },
+  "text.99c40ab40592": {
+    "en": "Date",
+    "zh": "日期"
+  },
+  "text.fe18013d93d2": {
+    "en": "Now",
+    "zh": "立即"
+  },
+  "text.75a5d3ceb143": {
+    "en": "Job Stats",
+    "zh": "执行实例统计"
+  },
+  "text.d2928545a657": {
+    "en": "Job Report",
+    "zh": "执行实例报告"
+  },
+  "text.5e5a07c2c750": {
+    "en": "Unknown Error",
+    "zh": "未知错误"
+  },
+  "text.a6fa895890ad": {
+    "en": "(No description)",
+    "zh": "无说明"
+  },
+  "text.df2b0c41642c": {
+    "en": "(No limit)",
+    "zh": "不限制"
+  },
+  "text.1af851907331": {
+    "en": "Size",
+    "zh": "大小"
+  },
+  "text.21b111cbfe6e": {
+    "en": "Default",
+    "zh": "默认"
+  },
+  "text.101f2ff3de22": {
+    "en": "Rows",
+    "zh": "行数"
+  },
+  "text.8e37953d23da": {
+    "en": "Value",
+    "zh": "值"
+  },
+  "text.fb8e7a1a3cb7": {
+    "en": "Items",
+    "zh": "项目"
+  },
+  "text.2729c3583bef": {
+    "en": "The request timed out.  Please try again.",
+    "zh": "请求超时，请重试。"
+  },
+  "text.e6b89923744c": {
+    "en": "An unknown network error occurred.  Please try again.",
+    "zh": "发生未知网络错误，请重试。"
+  },
+  "text.b66ab3ef1ed0": {
+    "en": "Script Source",
+    "zh": "脚本内容",
+    "dynamic": true
+  },
+  "text.e26476787f3b": {
+    "en": "Add Date/Time Stamps to Log",
+    "zh": "日志加时间戳",
+    "dynamic": true
+  },
+  "text.86af87a98a30": {
+    "en": "Interpret JSON in Output",
+    "zh": "解析输出中的 JSON",
+    "dynamic": true
+  },
+  "text.52a0f9b65b27": {
+    "en": "Method",
+    "zh": "请求方法",
+    "dynamic": true
+  },
+  "text.e7a241debad5": {
+    "en": "URL",
+    "zh": "URL",
+    "dynamic": true
+  },
+  "text.eb212c9f14b1": {
+    "en": "Request Headers",
+    "zh": "请求头",
+    "dynamic": true
+  },
+  "text.ce181e895492": {
+    "en": "POST Data",
+    "zh": "POST 请求内容",
+    "dynamic": true
+  },
+  "text.3e86ec1cdea4": {
+    "en": "Timeout (Seconds)",
+    "zh": "超时时间，秒",
+    "dynamic": true
+  },
+  "text.362d057d4fea": {
+    "en": "Idle Timeout (Seconds)",
+    "zh": "空闲超时时间，秒",
+    "dynamic": true
+  },
+  "text.addd713386b9": {
+    "en": "Connect Timeout (Seconds)",
+    "zh": "连接超时时间，秒",
+    "dynamic": true
+  },
+  "text.0bbacd03d850": {
+    "en": "Follow Redirects",
+    "zh": "跟随重定向",
+    "dynamic": true
+  },
+  "text.ecadc17d178e": {
+    "en": "SSL Cert Bypass",
+    "zh": "跳过 SSL 证书校验",
+    "dynamic": true
+  },
+  "text.b76eb8bf73b1": {
+    "en": "Success Match",
+    "zh": "成功匹配规则",
+    "dynamic": true
+  },
+  "text.7c20d9d82a93": {
+    "en": "Error Match",
+    "zh": "失败匹配规则",
+    "dynamic": true
+  },
+  "text.2014ab4e09b2": {
+    "en": "Test Duration (seconds)",
+    "zh": "测试时长，秒",
+    "dynamic": true
+  },
+  "text.b0762bc77ed8": {
+    "en": "Report Progress",
+    "zh": "报告进度",
+    "dynamic": true
+  },
+  "text.032583dcdae4": {
+    "en": "Burn Memory/CPU",
+    "zh": "消耗内存和 CPU",
+    "dynamic": true
+  },
+  "text.7f0b9b5804b7": {
+    "en": "Simulate Action",
+    "zh": "模拟结果",
+    "dynamic": true
+  },
+  "text.e7d3e769f3f5": {
+    "en": "Administrator",
+    "zh": "管理员",
+    "dynamic": true
+  },
+  "text.afaaf659ef90": {
+    "en": "Create Events",
+    "zh": "创建计划任务",
+    "dynamic": true
+  },
+  "text.26d2bb8cb828": {
+    "en": "Edit Events",
+    "zh": "编辑计划任务",
+    "dynamic": true
+  },
+  "text.656c6b95c6a1": {
+    "en": "Delete Events",
+    "zh": "删除计划任务",
+    "dynamic": true
+  },
+  "text.2aa32eeb2ae6": {
+    "en": "Run Events",
+    "zh": "运行计划任务",
+    "dynamic": true
+  },
+  "text.7bde66cf5c0f": {
+    "en": "Abort Events",
+    "zh": "中止执行实例",
+    "dynamic": true
+  },
+  "text.f4e9557d87f5": {
+    "en": "# of Events",
+    "zh": "计划任务数"
+  },
+  "text.bf603f8cf167": {
+    "en": "# of Servers",
+    "zh": "服务器数"
+  }
+}
