@@ -10,6 +10,21 @@ async function completed(lab, session, id) {
   }, { timeout: 15000 }).toBe(0);
   return result;
 }
+async function updatedStatus(page, update) {
+  await page.evaluate(update => {
+    const socket = app.socket;
+    window.__updatedJobStatus = false;
+    const listener = data => {
+      const job = data.active_jobs && data.active_jobs[update.id];
+      if (job && job.notify_success === update.notify_success && job.notify_fail === update.notify_fail) {
+        window.__updatedJobStatus = true;
+        socket.off('status', listener);
+      }
+    };
+    socket.on('status', listener);
+  }, update);
+  await page.waitForFunction(() => window.__updatedJobStatus);
+}
 
 test('I07 I11 I13 I15 I19 real UI create, cancel run, run once, socket updates and raw log download', async ({ browser }, info) => {
   const traces = [];
@@ -108,8 +123,11 @@ test('I18 I20 active jobs can be watched and aborted without touching their scri
     const watch = await action(page, '$P().toggle_watch()', 'app/update_job');
     expect(watch.body).toMatchObject({ id: jobId });
     expect(watch.body.notify_success).toContain('admin@cronicle.com');
+    // A queued pre-update status frame can overwrite the optimistic local job before the next toggle.
+    await updatedStatus(page, watch.body);
     const unwatch = await action(page, '$P().toggle_watch()', 'app/update_job');
     expect(unwatch.body.notify_success).not.toContain('admin@cronicle.com');
+    await updatedStatus(page, unwatch.body);
     await expect(page.locator('[onmouseup="$P().abort_job()"]:visible')).toBeVisible();
     await page.locator('[onmouseup="$P().abort_job()"]:visible').evaluate(button => {
       window.__abortSource = JSON.parse(JSON.stringify($P().find_job($P().args.id)));
