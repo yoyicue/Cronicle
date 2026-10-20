@@ -1,6 +1,6 @@
 const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
-  testDir: './integration', timeout: 45000, workers: 1, retries: 0, maxFailures: 1,
+  testDir: './integration', timeout: 45000, workers: 1, retries: 0,
   forbidOnly: Boolean(process.env.CI),
   globalSetup: require.resolve('./global-setup.cjs'),
   reporter: [['list'], ['json', { outputFile: 'out/integration.json' }]],

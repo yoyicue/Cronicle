@@ -21,8 +21,7 @@ permissions:
 jobs:
   verify:
     name: Full regression and three browsers
-    # shortcut: performance is calibrated on macOS arm64; add Linux after it meets the same budget.
-    runs-on: macos-15
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:
       CI: 'true'

@@ -3,7 +3,9 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const { labs, localPage, login, route, eventFixture } = require('./helpers.cjs');
-test('N01 N02 warmed rendering budgets and retained heap after 500 real page changes', async ({ browser, browserName }) => {
+// Trace capture changes layout timings; functional tests still retain failure traces.
+test.use({ trace: 'off' });
+test('N01 N02 warmed rendering budgets and retained heap after 500 real page changes', async ({ browser, browserName, trace }) => {
   test.skip(browserName !== 'chromium', 'HeapProfiler is a Chromium CDP measurement; layout is tested in every engine.');
   test.setTimeout(180000);
   const results = [], pages = [], counts = [3, 100, 1000];
@@ -24,6 +26,7 @@ test('N01 N02 warmed rendering budgets and retained heap after 500 real page cha
   for (const lab of labs()) {
     const session = await localPage(browser, lab);
     await login(session.page); await route(session.page, 'Schedule');
+    await session.page.evaluate(() => document.fonts.ready);
     pages.push({ lab, ...session, timings: counts.map(count => ({ count, samples: [] })) });
   }
   expect(pages.map(item => item.lab.locale)).toEqual(['official', 'en', 'zh-CN']);
@@ -63,7 +66,7 @@ test('N01 N02 warmed rendering budgets and retained heap after 500 real page cha
     expect(errors).toEqual([]);
     await context.close();
   }
-  fs.writeFileSync('out/performance.json', JSON.stringify({ platform: os.platform(), arch: os.arch(), cpus: os.cpus()[0].model, browser: browser.version(), cpuThrottle: 'none', warmup: 5, samples: 30, sampling: 'six counterbalanced blocks of five', order, results }, null, 2));
+  fs.writeFileSync('out/performance.json', JSON.stringify({ platform: os.platform(), arch: os.arch(), cpus: os.cpus()[0].model, browser: browser.version(), trace, cpuThrottle: 'none', warmup: 5, samples: 30, sampling: 'six counterbalanced blocks of five', order, results }, null, 2));
   for (const result of results.slice(1)) {
     for (let i = 0; i < 3; i++) expect(result.timings[i].p95 - results[0].timings[i].p95).toBeLessThanOrEqual(Math.max(results[0].timings[i].p95 * 0.1, 20));
     expect(result.after - results[0].after).toBeLessThan(8 * 1024 * 1024);
