@@ -85,7 +85,7 @@ async function sample(pages, name, traced) {
       await page.evaluate(() => {
         const probe = document.createElement('span');
         probe.id = 'diagnostic-font';
-        probe.textContent = '运行 编辑 统计 执行历史 每日 暂无 Run Edit Stats History';
+        probe.textContent = '运行编辑统计执行历史每日暂无';
         document.body.append(probe);
         probe.getBoundingClientRect();
       });
@@ -103,20 +103,21 @@ async function sample(pages, name, traced) {
       window.__originalHTML = $P().div.html;
     });
     const font = report.fonts.find(r => r.locale === 'zh-CN').fonts.find(font => !font.isCustomFont).familyName;
-    for (const variant of ['original-before', 'english-timing', 'original-middle', 'english-actions', 'english-timing-and-actions', 'explicit-fallback-font', 'original-after']) {
+    for (const variant of ['original-before', 'explicit-fallback-font', 'original-middle', 'actions-font-first', 'nowrap-actions', 'keep-all-actions', 'original-after']) {
       await chinese.evaluate(({ variant, font }) => {
         document.querySelector('#diagnostic-font-style')?.remove();
-        if (variant === 'explicit-fallback-font') {
+        const rules = {
+          'explicit-fallback-font': '#page_Schedule .data_table { font-family: "Lato", ' + JSON.stringify(font) + ', helvetica, sans-serif }',
+          'actions-font-first': '#page_Schedule .data_table td:nth-child(8) { font-family: ' + JSON.stringify(font) + ', "Lato", helvetica, sans-serif }',
+          'nowrap-actions': '#page_Schedule .data_table td:nth-child(8) { white-space: nowrap }',
+          'keep-all-actions': '#page_Schedule .data_table td:nth-child(8) { word-break: keep-all }'
+        };
+        if (rules[variant]) {
           const style = document.createElement('style');
           style.id = 'diagnostic-font-style';
-          style.textContent = '#page_Schedule .data_table { font-family: "Lato", ' + JSON.stringify(font) + ', helvetica, sans-serif }';
+          style.textContent = rules[variant];
           document.head.append(style);
         }
-        window.I18N = variant.includes('timing') ? { ...window.__originalI18N, timing: summarize_event_timing } : window.__originalI18N;
-        $P().div.html = variant.includes('actions') ? function(value) {
-          for (const [zh, en] of [['运行', 'Run'], ['编辑', 'Edit'], ['统计', 'Stats'], ['执行历史', 'History']]) value = value.replaceAll('<b>' + zh + '</b>', '<b>' + en + '</b>');
-          return window.__originalHTML.call(this, value);
-        } : window.__originalHTML;
       }, { variant, font });
       await sample(pages, variant, false);
     }
