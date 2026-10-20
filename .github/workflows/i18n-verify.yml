@@ -21,8 +21,7 @@ permissions:
 jobs:
   verify:
     name: Full regression and three browsers
-    # shortcut: performance is calibrated on macOS arm64; add Linux after it meets the same budget.
-    runs-on: macos-15
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:
       CI: 'true'
@@ -51,6 +50,16 @@ jobs:
         run: |
           tools/i18n/node_modules/node/bin/node tools/i18n/node_modules/@playwright/test/cli.js install --with-deps chromium firefox webkit
           npm --prefix tools/i18n run prepare:caddy
+      - name: Diagnose rendering and tracing on the same Linux runner
+        run: tools/i18n/node_modules/node/bin/node tools/i18n/diagnose-performance.cjs
+      - name: Preserve performance diagnosis
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: i18n-diagnosis
+          path: tools/i18n/out/diagnosis/
+          if-no-files-found: error
+          retention-days: 14
       - name: Run the complete verification and build the tested archive
         run: npm --prefix tools/i18n run verify
       - name: Prepare release attachments from the same tested archive
