@@ -1,26 +1,98 @@
-name: Linux download diagnosis
+name: Linux functional diagnosis
+
 on:
+  push:
+    branches: [zh-CN]
+  pull_request:
+    branches: [zh-CN]
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      release_tag:
+        type: string
+        default: ''
+      publish:
+        type: boolean
+        default: false
+
 permissions:
   contents: read
+
 jobs:
-  diagnose:
+  verify:
+    name: Full regression and three browsers
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 45
+    env:
+      CI: 'true'
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      PUBLISH_RELEASE: ${{ inputs.publish }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: 22.23.3
-      - run: npm ci --prefix tools/i18n --no-audit --no-fund
-      - run: tools/i18n/node_modules/node/bin/node tools/i18n/node_modules/@playwright/test/cli.js install --with-deps chromium firefox webkit
-      - run: xvfb-run -a tools/i18n/node_modules/node/bin/node tools/i18n/diagnose-download.cjs
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+      - name: Validate release baseline and tag
+        if: inputs.release_tag != ''
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          git fetch --no-tags https://github.com/jhuckaby/Cronicle.git "refs/tags/v$VERSION:refs/tags/v$VERSION"
+          node tools/i18n/ci-release.cjs preflight
+      - name: Install locked dependencies without registering a service
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm ci --prefix tools/i18n --no-audit --no-fund
+      - name: Install browser dependencies and verified Caddy
+        run: |
+          tools/i18n/node_modules/node/bin/node tools/i18n/node_modules/@playwright/test/cli.js install --with-deps chromium firefox webkit
+          npm --prefix tools/i18n run prepare:caddy
+      - name: Run the complete verification and build the tested archive
+        run: npm --prefix tools/i18n run integration -- --grep "I02 I27|I06 I29|I07 I11"
+      - name: Prepare release attachments from the same tested archive
+        if: inputs.release_tag != ''
+        run: tools/i18n/node_modules/node/bin/node tools/i18n/ci-release.cjs
+      - name: Preserve verification evidence
         if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: i18n-download-diagnosis
-          path: tools/i18n/out/diagnosis/
+          name: i18n-verification
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            tools/i18n/out/verification.json
+            tools/i18n/out/unit.tap
+            tools/i18n/out/upstream.log
+            tools/i18n/out/upstream-result.json
+            tools/i18n/out/integration.json
+            tools/i18n/out/performance.json
+            tools/i18n/out/minute.json
+            tools/i18n/out/smtp.json
+            tools/i18n/out/caddy.log
+            tools/i18n/out/layout-*.png
+            tools/i18n/test-results/
+            tools/i18n/out/release-manifest.json
+            tools/i18n/out/cronicle-zh-CN-*.tar.gz
+      - name: Preserve ready-to-publish attachments
+        if: inputs.release_tag != '' && success()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: i18n-release
+          path: tools/i18n/out/release/
           if-no-files-found: error
           retention-days: 14
+      - name: Download the same release artifact before handing it to publication
+        if: inputs.release_tag != '' && success()
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: i18n-release
+          path: tools/i18n/.work/release-transfer
+      - name: Check artifact transfer byte for byte
+        if: inputs.release_tag != '' && success()
+        run: |
+          diff -qr tools/i18n/out/release tools/i18n/.work/release-transfer
+          cd tools/i18n/.work/release-transfer/assets
+          shasum -a 256 -c SHA256SUMS
