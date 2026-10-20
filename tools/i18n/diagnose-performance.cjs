@@ -31,6 +31,8 @@ async function measure(page, iterations) {
       const done = performance.now();
       samples.push({ render: rendered - begin, layout: done - rendered, total: done - begin });
     }
+    const row = [...document.querySelectorAll('#page_Schedule .data_table tr')].find(row => row.cells.length === 8 && row.cells[0].tagName === 'TD');
+    window.__diagnosticGeometry = [...row.cells].map(cell => ({ text: cell.innerText, width: cell.offsetWidth, height: cell.offsetHeight }));
     app.schedule = original;
     $P().gosub_events({});
     return samples;
@@ -61,9 +63,10 @@ async function sample(pages, name, traced) {
     }
   }
   if (traced) for (const { context } of pages) await context.tracing.stop();
-  for (const result of phase.results) {
+  for (const [index, result] of phase.results.entries()) {
     assert.equal(result.samples.length, 30);
     result.p95 = Object.fromEntries(['render', 'layout', 'total'].map(key => [key, p95(result.samples.map(s => s[key]))]));
+    result.geometry = await pages[index].page.evaluate(() => window.__diagnosticGeometry);
   }
   phase.loadAfter = os.loadavg();
   report.phases.push(phase); save();
@@ -77,28 +80,49 @@ async function sample(pages, name, traced) {
     browser = await chromium.launch();
     report.browser = browser.version();
     const pages = await openPages(browser, labs());
-    // Reverse the trace comparison to expose time/order effects instead of selecting one favourable run.
-    for (const [name, traced] of [['untraced-before', false], ['traced-first', true], ['traced-second', true], ['untraced-after', false]]) await sample(pages, name, traced);
-    for (const { page, context, lab, errors } of pages) {
-      assert.deepEqual(errors, []);
+    report.fonts = [];
+    for (const { page, context, lab } of pages) {
+      await page.evaluate(() => {
+        const probe = document.createElement('span');
+        probe.id = 'diagnostic-font';
+        probe.textContent = '运行 编辑 统计 执行历史 每日 暂无 Run Edit Stats History';
+        document.body.append(probe);
+        probe.getBoundingClientRect();
+      });
       const cdp = await context.newCDPSession(page);
-      await cdp.send('Performance.enable');
-      await cdp.send('Profiler.enable');
-      await cdp.send('Profiler.start');
-      const before = Object.fromEntries((await cdp.send('Performance.getMetrics')).metrics.map(m => [m.name, m.value]));
-      const samples = await measure(page, 10);
-      const after = Object.fromEntries((await cdp.send('Performance.getMetrics')).metrics.map(m => [m.name, m.value]));
-      const { profile } = await cdp.send('Profiler.stop');
-      fs.writeFileSync(path.join(output, lab.locale + '.cpuprofile'), JSON.stringify(profile));
-      const metrics = Object.fromEntries(['ScriptDuration', 'LayoutDuration', 'RecalcStyleDuration', 'TaskDuration', 'LayoutCount', 'RecalcStyleCount'].map(key => [key, after[key] - before[key]]));
-      report.profiles.push({ locale: lab.locale, metrics, samples }); save();
-      await context.close();
+      await cdp.send('DOM.enable'); await cdp.send('CSS.enable');
+      const { root } = await cdp.send('DOM.getDocument');
+      const { nodeId } = await cdp.send('DOM.querySelector', { nodeId: root.nodeId, selector: '#diagnostic-font' });
+      report.fonts.push({ locale: lab.locale, ...(await cdp.send('CSS.getPlatformFontsForNode', { nodeId })) });
+      await page.evaluate(() => document.querySelector('#diagnostic-font').remove());
+      await cdp.detach();
     }
-    const controls = await openPages(browser, ['control-A', 'control-B', 'control-C'].map(locale => ({ ...labs()[0], locale })));
-    await sample(controls, 'identical-official-control', false);
-    for (const { context, errors } of controls) { assert.deepEqual(errors, []); await context.close(); }
-    assert.equal(report.phases.length, 5);
-    assert.equal(report.profiles.length, 3);
+    const chinese = pages.find(({ lab }) => lab.locale === 'zh-CN').page;
+    await chinese.evaluate(() => {
+      window.__originalI18N = I18N;
+      window.__originalHTML = $P().div.html;
+    });
+    const font = report.fonts.find(r => r.locale === 'zh-CN').fonts.find(font => !font.isCustomFont).familyName;
+    for (const variant of ['original-before', 'english-timing', 'original-middle', 'english-actions', 'english-timing-and-actions', 'explicit-fallback-font', 'original-after']) {
+      await chinese.evaluate(({ variant, font }) => {
+        document.querySelector('#diagnostic-font-style')?.remove();
+        if (variant === 'explicit-fallback-font') {
+          const style = document.createElement('style');
+          style.id = 'diagnostic-font-style';
+          style.textContent = '#page_Schedule .data_table { font-family: "Lato", ' + JSON.stringify(font) + ', helvetica, sans-serif }';
+          document.head.append(style);
+        }
+        window.I18N = variant.includes('timing') ? { ...window.__originalI18N, timing: summarize_event_timing } : window.__originalI18N;
+        $P().div.html = variant.includes('actions') ? function(value) {
+          for (const [zh, en] of [['运行', 'Run'], ['编辑', 'Edit'], ['统计', 'Stats'], ['执行历史', 'History']]) value = value.replaceAll('<b>' + zh + '</b>', '<b>' + en + '</b>');
+          return window.__originalHTML.call(this, value);
+        } : window.__originalHTML;
+      }, { variant, font });
+      await sample(pages, variant, false);
+    }
+    for (const { context, errors } of pages) { assert.deepEqual(errors, []); await context.close(); }
+    assert.equal(report.phases.length, 7);
+    assert.equal(report.fonts.length, 3);
     report.completed = new Date().toISOString(); save();
   } finally {
     if (browser) await browser.close();
