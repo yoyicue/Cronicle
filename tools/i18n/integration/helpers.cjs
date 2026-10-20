@@ -32,6 +32,9 @@ async function localPage(browser, lab, options = {}) {
   return { page, context, errors, socketEvents, externalRequests };
 }
 async function login(page, username = 'admin', password = 'admin') {
+  await expect(page.locator('#fe_login_username')).toBeVisible();
+  const initialField = await page.evaluate(() => app.getPref('username') ? '#fe_login_password' : '#fe_login_username');
+  await expect(page.locator(initialField)).toBeFocused();
   await page.locator('#fe_login_username').fill(username);
   await page.locator('#fe_login_password').fill(password);
   const response = page.waitForResponse(r => r.url().endsWith('/user/login') && r.request().method() === 'POST');
@@ -53,6 +56,16 @@ async function route(page, value) {
   const id = value.split('?')[0];
   await page.waitForFunction(id => app.page_manager.current_page_id === id, id);
   await expect(page.locator('#page_' + id)).not.toHaveClass(/loading/);
+  // Original forms focus a field in a timer; typing earlier can go into the previous field in Firefox.
+  const params = new URLSearchParams(value.split('?')[1] || '');
+  const firstField = {
+    'Admin:new_category': '#fe_ec_title', 'Admin:new_plugin': '#fe_ep_title',
+    'Admin:new_api_key': '#fe_ak_title', 'Admin:new_user': '#fe_eu_username',
+    'Schedule:new_event': '#fe_ee_title'
+  }[id + ':' + params.get('sub')];
+  if (firstField) await expect(page.locator(firstField)).toBeFocused();
+  if (id === 'Login' && params.has('recover')) await expect(page.locator('#fe_pr_username')).toBeFocused();
+  if (id === 'Login' && params.has('u') && params.has('h')) await expect(page.locator('#fe_reset_password')).toBeFocused();
 }
 async function api(lab, endpoint, params = {}, session) {
   const response = await fetch(lab.baseURL + '/api/' + endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...params, ...(session ? { session_id: session } : {}) }) });
