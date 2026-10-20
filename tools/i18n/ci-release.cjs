@@ -95,6 +95,7 @@ tools/i18n/node_modules/node/bin/node tools/i18n/verify.cjs /absolute/path/unpac
 完整验证：${run}。开始 ${summary.started}，完成 ${summary.completed}。
 
 运行环境：${summary.platform} ${summary.arch}，Node ${summary.node}。源码门禁、单元与静态处理器、官方回归和 A/B/C 三浏览器集成全部通过，浏览器无自动重试。真实分钟任务、HTTP 全包与 CDP 性能检查在 Chromium 执行，Firefox 和 WebKit 对这三项明确去重，其余界面用例在三个引擎执行。
+${summary.platform === 'linux' ? '\nLinux WebKit 将 text/plain 附件直接显示，见 https://github.com/microsoft/playwright/issues/34076 。本次点击原下载链接，逐组核对官方相同行为、附件头、响应字节和显示日志；Chromium 与 Firefox 校验实际下载文件及文件名。此项不代表 Safari 原生下载已经验收。\n' : ''}
 
 本次运行的 i18n-verification artifact 保存 verification.json、unit.tap、upstream.log、integration.json、performance.json、minute.json 及失败诊断。文件内记录实际数量、性能预算和运行环境，不能用历史报告替代。
 

@@ -26,8 +26,10 @@ async function updatedStatus(page, update) {
   await page.waitForFunction(() => window.__updatedJobStatus);
 }
 
-test('I07 I11 I13 I15 I19 real UI create, cancel run, run once, socket updates and raw log download', async ({ browser }, info) => {
+test('I07 I11 I13 I15 I19 real UI create, cancel run, run once, socket updates and raw log download', async ({ browser, browserName }, info) => {
   const traces = [];
+  const inlineAttachment = browserName === 'webkit' && process.platform === 'linux';
+  if (inlineAttachment) info.annotations.push({ type: 'browser limitation', description: 'Linux WebKit displays text/plain attachments inline: https://github.com/microsoft/playwright/issues/34076' });
   for (const lab of labs()) {
     const session = await admin(lab), id = 'run' + info.project.name;
     const { page, context, errors, socketEvents } = await localPage(browser, lab);
@@ -72,10 +74,25 @@ test('I07 I11 I13 I15 I19 real UI create, cancel run, run once, socket updates a
     const log = await logResponse.text();
     expect(log).toContain('History Success Home Run\n');
     const link = page.locator('a[href*="get_job_log"][href*="download=1"]:visible');
-    const downloadPromise = page.waitForEvent('download');
-    await link.click();
-    const download = await downloadPromise;
-    expect(fs.readFileSync(await download.path(), 'utf8')).toBe(log);
+    if (inlineAttachment) {
+      // shortcut: Linux WebKit ignores text/plain attachment headers; restore the file assertion when upstream fixes #34076.
+      const url = new URL(await link.getAttribute('href'), lab.baseURL).href;
+      const pending = page.waitForResponse(response => response.url() === url && response.request().isNavigationRequest());
+      await link.click();
+      const response = await pending;
+      expect(response.status()).toBe(200);
+      expect(await response.headerValue('content-disposition')).toBe('attachment; filename=Cronicle-Job-Log-' + jobId + '.txt');
+      expect(await response.body()).toEqual(Buffer.from(log));
+      await expect(page).toHaveURL(url);
+      expect(await page.locator('pre').textContent()).toBe(log);
+    }
+    else {
+      const downloadPromise = page.waitForEvent('download');
+      await link.click();
+      const download = await downloadPromise;
+      expect(download.suggestedFilename()).toBe('Cronicle-Job-Log-' + jobId + '.txt');
+      expect(fs.readFileSync(await download.path(), 'utf8')).toBe(log);
+    }
     expect(socketEvents.some(event => event.direction === 'sent' && event.name === 'authenticate')).toBe(true);
     expect(socketEvents.some(event => event.direction === 'received' && event.name === 'status')).toBe(true);
     const history = await api(lab, 'app/get_event_history', { id, offset: 0, limit: 20 }, session);

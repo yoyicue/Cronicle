@@ -1,3 +1,8 @@
 html[lang="zh-CN"] td.table_label {
 	white-space: nowrap;
 }
+
+/* An explicit CJK fallback reduces Linux table layout cost while retaining Lato for Latin text. */
+html[lang="zh-CN"] #page_Schedule .data_table {
+	font-family: "Lato", "WenQuanYi Zen Hei", helvetica, sans-serif;
+}

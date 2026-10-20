@@ -36,6 +36,7 @@ test('I02 I27 I28 user creation, account update, recovery mail and privilege ref
     await api(lab, 'app/create_event', eventFixture(fixtureId), session);
     const noRun = await api(lab, 'app/run_event', { id: fixtureId }, lowSession);
     expect(noRun.code).not.toBe(0);
+    expect((await api(lab, 'app/delete_event', { id: fixtureId }, session)).code).toBe(0);
     await route(page, 'MyAccount');
     await page.fill('#fe_ma_fullname', 'History Run');
     await page.fill('#fe_ma_old_password', password);
@@ -52,11 +53,14 @@ test('I02 I27 I28 user creation, account update, recovery mail and privilege ref
     await route(page, 'Login?recover=1');
     await page.fill('#fe_pr_username', username); await page.fill('#fe_pr_email', email);
     const recover = await action(page, '$P().doSendRecoveryEmail()', 'user/forgot_password');
-    await expect.poll(() => JSON.parse(fs.readFileSync(path.join(__dirname, '../out/smtp.json'))).filter(message => message.includes(email)).length).toBeGreaterThanOrEqual(2);
-    const messages = JSON.parse(fs.readFileSync(path.join(__dirname, '../out/smtp.json'))).filter(message => message.includes(email));
-    const mail = messages.find(message => message.includes(lab.baseURL) && /Login\?u=/.test(message));
-    expect(mail).toBeTruthy();
-    const decoded = mail.replace(/=\r\n/g, '').replace(/=([A-F\d]{2})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)));
+    let decoded;
+    // All three origins share a recipient; wait for this origin's recovery mail, not an earlier origin's count.
+    await expect.poll(() => {
+      decoded = JSON.parse(fs.readFileSync(path.join(__dirname, '../out/smtp.json')))
+        .map(mail => mail.replace(/=\r\n/g, '').replace(/=([A-F\d]{2})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16))))
+        .find(mail => mail.includes(email) && mail.includes(lab.baseURL + '/') && mail.includes('Login?u=' + username + '&h='));
+      return Boolean(decoded);
+    }).toBe(true);
     const token = decoded.match(/Login\?u=([^&\s]+)&h=(\w+)/);
     expect(token[1]).toBe(username);
     await route(page, 'Login?u=' + username + '&h=' + token[2]);

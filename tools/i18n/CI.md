@@ -12,9 +12,17 @@
 
 渲染性能先对 A/B/C 全部预热，再按六轮、每组五个样本轮换采集，每组在三个位置各出现两次，保留每种规模 30 个原始样本与采样顺序。p95 仍要求增量不超过基线的 10% 或 20 毫秒中较大者，堆内存与 gzip 预算保持。共享 runner 曾在 macOS 上触发顺序分段测量的预算失败，因此不能只靠切换系统或重跑解释通过；轮换采样后的每次结果仍须实际满足原预算。
 
-首轮 Linux 的性能失败不能证明 runner 算力不足。此前切换 macOS 也出现预算失败。[Linux 同机诊断](https://github.com/yoyicue/Cronicle/actions/runs/39355406325)使用 4 核 EPYC 和约 16GB 内存，三个相同官方页面的 p95 最大差异约 4.7%。10 次渲染的中文布局累计耗时比官方增加约 311 毫秒，主要差异在浏览器布局。追踪开启的两组中文 p95 增量为 36.3 和 39.7 毫秒，超过各自 32.62 和 31.56 毫秒预算；追踪关闭的两组增量为 24.5 和 27.3 毫秒，落在各自 33.68 和 31.54 毫秒预算内。这些是诊断对照，不能代替完整验收。
+首轮 Linux 的性能失败不能证明 runner 算力不足。此前切换 macOS 也出现预算失败。[Linux 同机诊断](https://github.com/yoyicue/Cronicle/actions/runs/39355406325)使用 4 核 EPYC 和约 16GB 内存，三个相同官方页面的 p95 相对 A 组偏差最高约 4.7%。10 次渲染的中文布局累计耗时比官方增加约 311 毫秒，主要差异在浏览器布局。追踪开启的两组中文 p95 增量为 36.3 和 39.7 毫秒，超过各自 32.62 和 31.56 毫秒预算；追踪关闭的两组增量为 24.5 和 27.3 毫秒，落在各自 33.68 和 31.54 毫秒预算内。这些是诊断对照，不能代替完整验收。
 
 性能用例等待字体就绪并单独关闭 Playwright trace，避免把截图、DOM 快照等追踪开销计入应用性能。原始样本、采样顺序、运行平台和 trace 设置保存在 performance.json；功能用例仍保留失败 trace。字体和中文文案仍有实际布局成本，完整运行必须满足原预算，失败不能通过重跑挑绿或改用更快的平台放行。
+
+[后续排版对照](https://github.com/yoyicue/Cronicle/actions/runs/39356076333)中，关闭追踪后仍有中文增量超预算，英文操作文案对照显著减少布局成本。因此不能把 trace 当作唯一根因。[中文字体探针与 CSS 对照](https://github.com/yoyicue/Cronicle/actions/runs/39356644259)确认 Linux 使用 WenQuanYi Zen Hei，nowrap 与 keep-all 没有明显改善，指定字体栈的收益仍需与基线波动区分。诊断任务成功只代表实验执行完成，不代表完整验收放行。
+
+[字体栈双向顺序对照](https://github.com/yoyicue/Cronicle/actions/runs/39357989602)在原始、显式回退、中文字体优先、中文字体优先、显式回退、原始的顺序中执行。原始中文 p95 增量为 42.0 和 32.4 毫秒，显式声明已使用的 WenQuanYi Zen Hei 后为 19.2 和 8.5 毫秒，表格宽高保持。中文字体优先还能降低耗时，但改变拉丁字形与列宽，因此只在中文任务列表中采用保留 Lato 的显式回退链。字体不存在时仍使用原有 helvetica、sans-serif，不下载或捆绑新字体。该变化必须重新通过完整验收，诊断通过本身不放行。
+
+恢复邮件用例按本组来源、收件人和恢复链接等待 SMTP 夹具，避免 A/B/C 共用收件人时误用前一组的邮件数量。权限拒绝用例随即清理临时任务，避免失败残留污染后续控件比较。[Linux 三浏览器定向验证](https://github.com/yoyicue/Cronicle/actions/runs/39358127724)覆盖邮件、控件和日志九项，全部通过，无重试或跳过。
+
+[32 组独立下载对照](https://github.com/yoyicue/Cronicle/actions/runs/39357781475)确认 Linux WebKit 将 text/plain 附件直接显示，而 application/octet-stream 会下载；gzip、请求拦截、有头或无头均不改变结果，Chromium 与 Firefox 全部实际下载。这与[上游已记录的问题](https://github.com/microsoft/playwright/issues/34076)相符。Linux WebKit 验收点击原下载链接，逐组核对官方相同行为、附件头、响应字节和显示日志，记录浏览器限制；Chromium 与 Firefox 仍校验实际文件及文件名。该检查不代表 Safari 原生下载已验收，不改变 Cronicle 的 MIME、链接或运行代码。
 
 每次运行保留 i18n-verification artifact 14 天，包含选定的测试报告、日志、截图、失败 trace、manifest 和通过验证的静态归档。不会上传 .work 中的实例目录、生成配置和会话。检查失败时先下载报告，不用重跑覆盖失败证据。
 
