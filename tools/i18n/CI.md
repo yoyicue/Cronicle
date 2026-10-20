@@ -23,7 +23,7 @@
 
 tag 中的上游版本必须等于 package.json 的版本。工作流从 jhuckaby/Cronicle 拉取官方 v0.9.137 这样的原始 tag，必须解析为 sites.json 登记的确切上游提交，且为当前提交的祖先。中文 tag 已存在时必须指向同一本次测试提交，避免测试分支代码却发布旧 tag。
 
-发布复用同一次完整验证输出的归档，不再构建。归档 SHA-256、manifest、静态内容和 gzip 再次核对后，生成六个附件：安装 tar.gz、manifest.json、SHA256SUMS、INSTALL.md、VALIDATION.md、LICENSE.md。安装和验收说明记录本次源码、上游版本、归档哈希和 Actions 运行链接，不复用首版 r1 的历史报告。
+发布复用同一次完整验证输出的归档，不再构建。归档 SHA-256、manifest、静态内容和 gzip 再次核对后，生成六个附件：安装 tar.gz、manifest.json、SHA256SUMS、INSTALL.md、VALIDATION.md、LICENSE.md。安装和验收说明记录本次源码、上游版本、归档哈希和 Actions 运行链接，不复用首版 r1 的历史报告。预演和正式发布都先回下载 Actions artifact，逐字节比较并检查 SHA256SUMS，确保交接给上传 job 的材料完整。
 
 正式上传在独立 job 中进行，只有该 job 获得 contents:write。它不检出或运行仓库代码，只接收同一次验收的 artifact。发布前再次确认远端 tag 指向测试提交，创建草稿，下载全部附件逐字节比较，通过后转为正式 Release。已存在的 Release 不会被覆盖；若留下草稿，核对失败原因后人工处理，再重跑。发布流程不删除 tag 或既有 Release。
 

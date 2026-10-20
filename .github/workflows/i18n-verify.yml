@@ -84,3 +84,15 @@ jobs:
           path: tools/i18n/out/release/
           if-no-files-found: error
           retention-days: 14
+      - name: Download the same release artifact before handing it to publication
+        if: inputs.release_tag != '' && success()
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: i18n-release
+          path: tools/i18n/.work/release-transfer
+      - name: Check artifact transfer byte for byte
+        if: inputs.release_tag != '' && success()
+        run: |
+          diff -qr tools/i18n/out/release tools/i18n/.work/release-transfer
+          cd tools/i18n/.work/release-transfer/assets
+          shasum -a 256 -c SHA256SUMS
