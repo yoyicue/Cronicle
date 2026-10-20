@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   verify:
-    name: Full regression and three browsers
+    name: Nine affected browser cases
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:
@@ -50,7 +50,7 @@ jobs:
         run: |
           tools/i18n/node_modules/node/bin/node tools/i18n/node_modules/@playwright/test/cli.js install --with-deps chromium firefox webkit
           npm --prefix tools/i18n run prepare:caddy
-      - name: Run the complete verification and build the tested archive
+      - name: Verify mail, invariants and raw logs in three browsers
         run: npm --prefix tools/i18n run integration -- --grep "I02 I27|I06 I29|I07 I11"
       - name: Prepare release attachments from the same tested archive
         if: inputs.release_tag != ''
