@@ -8,7 +8,7 @@
 
 ## 安装已发布包
 
-已构建版本见 [zh-CN-v0.9.137-r1](https://github.com/yoyicue/Cronicle/releases/tag/zh-CN-v0.9.137-r1)。下载、校验与追加发布步骤见 [INSTALL](INSTALL.md)。以下命令用于准备源码构建与验证环境。
+已构建版本见 [zh-CN-v0.9.137-r2](https://github.com/yoyicue/Cronicle/releases/tag/zh-CN-v0.9.137-r2)。下载、校验与追加发布步骤见 [INSTALL](INSTALL.md)。以下命令用于准备源码构建与验证环境。
 
 ## 安装开发依赖
 

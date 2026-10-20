@@ -11,7 +11,7 @@
 
 ## 下载已构建版本
 
-首个发布为 [zh-CN-v0.9.137-r1](https://github.com/yoyicue/Cronicle/releases/tag/zh-CN-v0.9.137-r1)，仅适配官方 `v0.9.137`。下载六个附件并校验 `SHA256SUMS`，按照[安装说明](tools/i18n/INSTALL.md)追加静态资源。使用发布包无需重新构建，也无需重启调度器。
+当前发布为 [zh-CN-v0.9.137-r2](https://github.com/yoyicue/Cronicle/releases/tag/zh-CN-v0.9.137-r2)，仅适配官方 `v0.9.137`。下载六个附件并校验 `SHA256SUMS`，按照[安装说明](tools/i18n/INSTALL.md)追加静态资源。使用发布包无需重新构建，也无需重启调度器。
 
 ## 从源码构建与验证
 
@@ -30,7 +30,7 @@ npm ci --prefix tools/i18n --no-audit --no-fund
 
 跟进新 tag 时先审查官方差异，再更新翻译位置清单和原文哈希，执行官方回归、A/B/C 三组对照和三浏览器集成。源码漂移会阻止构建，通过验收后才发布对应版本。不要用 GitHub 的 Sync fork 直接向汉化分支合入官方 master，适配以指定 tag 为基线。同步源码不会自动升级运行中的 Cronicle。
 
-首次发布产物以本分支的本地验收为依据。目标环境的静态资源、网关、权限与既有任务连续性仍需单独验收，详见验收边界。
+每次发布产物经过 GitHub Actions 的完整 Linux 验收，确切源码、运行链接和适用边界记录在该版本附件 VALIDATION.md 中。目标环境的静态资源、网关、权限与既有任务连续性仍需单独验收，详见验收边界。
 
 ## 许可
 

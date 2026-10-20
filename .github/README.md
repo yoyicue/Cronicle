@@ -2,7 +2,7 @@
 
 本 fork 基于官方 `v0.9.137`，保留官方运行源码，增加中文展示层、静态构建工具和集成测试。中文包与确切上游版本配对，源码漂移会阻止构建。
 
-- [下载 zh-CN-v0.9.137-r1](https://github.com/yoyicue/Cronicle/releases/tag/zh-CN-v0.9.137-r1)
+- [下载 zh-CN-v0.9.137-r2](https://github.com/yoyicue/Cronicle/releases/tag/zh-CN-v0.9.137-r2)
 - [安装已发布的静态包](../tools/i18n/INSTALL.md)
 - [中文说明与版本维护](../README.zh-CN.md)
 - [构建、验证与安装](../tools/i18n/README.md)
